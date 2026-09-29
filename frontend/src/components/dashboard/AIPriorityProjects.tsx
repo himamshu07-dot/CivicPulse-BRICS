@@ -27,28 +27,8 @@ export const AIPriorityProjects: React.FC<AIPriorityProjectsProps> = ({
 }) => {
   const [selectedProject, setSelectedProject] =
     useState<AIProjectRecommendation | null>(null);
-  const [minScore, setMinScore] = useState<number>(75);
-  const [internalProjects, setInternalProjects] = useState<AIProjectRecommendation[]>(MOCK_AI_PROJECTS);
-
-  const activeProjects = externalProjects && externalProjects.length > 0 ? externalProjects : internalProjects;
-
-  React.useEffect(() => {
-    if (externalProjects && externalProjects.length > 0) return;
-    async function loadLiveProjects() {
-      try {
-        const res = await fetch("http://localhost:8000/api/v1/hotspots");
-        if (res.ok) {
-          const json = await res.json();
-          if (json.ai_projects && json.ai_projects.length > 0) {
-            setInternalProjects(json.ai_projects);
-          }
-        }
-      } catch {
-        // Fallback
-      }
-    }
-    loadLiveProjects();
-  }, [externalProjects]);
+  const [minScore, setMinScore] = useState<number>(50);
+  const activeProjects = externalProjects !== undefined ? externalProjects : [];
 
   const filteredProjects = activeProjects.filter((proj) => {
     const matchRegion =

@@ -19,16 +19,26 @@ import {
 
 interface LiveRequestFeedProps {
   selectedRegion?: string;
+  liveRequests?: CitizenRequest[];
 }
 
 export const LiveRequestFeed: React.FC<LiveRequestFeedProps> = ({
   selectedRegion = "ALL",
+  liveRequests,
 }) => {
-  const [requests, setRequests] = useState<CitizenRequest[]>(MOCK_CITIZEN_REQUESTS);
+  const [requests, setRequests] = useState<CitizenRequest[]>(
+    liveRequests && liveRequests.length > 0 ? liveRequests : MOCK_CITIZEN_REQUESTS
+  );
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>("ALL");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (liveRequests && liveRequests.length > 0) {
+      setRequests(liveRequests);
+    }
+  }, [liveRequests]);
 
   // Filter requests based on selected region, category, and search query
   const filteredRequests = requests.filter((req) => {
@@ -218,6 +228,12 @@ export const LiveRequestFeed: React.FC<LiveRequestFeedProps> = ({
 
               {/* Right Segment: Region Tag & Category Badge */}
               <div className="flex items-center gap-2 shrink-0 self-start md:self-center">
+                {req.duplicateCount && req.duplicateCount > 1 ? (
+                  <span className="text-[10px] bg-amber-100 text-amber-800 font-bold px-1.5 py-0.5 rounded border border-amber-300">
+                    +{req.duplicateCount} merged
+                  </span>
+                ) : null}
+
                 <span className="text-[10px] text-text-muted font-mono bg-slate-100 px-1.5 py-0.5 rounded border border-slate-200">
                   {req.region}
                 </span>

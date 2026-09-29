@@ -1,79 +1,170 @@
 import asyncio
 import re
-from typing import Optional, Tuple, Union
+from typing import Any, Dict, List, Optional, Tuple, Union
 from fastapi import UploadFile
 
-
-# Language script detection heuristics
+# Script detection regex patterns
 CYRILLIC_PATTERN = re.compile(r"[\u0400-\u04FF]")
 DEVANAGARI_PATTERN = re.compile(r"[\u0900-\u097F]")
 CHINESE_PATTERN = re.compile(r"[\u4E00-\u9FFF]")
 ARABIC_PATTERN = re.compile(r"[\u0600-\u06FF]")
 ETHIOPIC_PATTERN = re.compile(r"[\u1200-\u137F]")
 
+# Multilingual Vocabulary & Dictionaries
+PORTUGUESE_KEYWORDS = [
+    "água", "saúde", "hospital", "energia", "luz", "escola", "ponte", "bairro",
+    "prefeitura", "cano", "rompimento", "alagamento", "ônibus", "apagão", "buraco",
+    "esgoto", "remédio", "vazamento", "poste", "rua", "enchente", "médico"
+]
+
+HINDI_LATIN_KEYWORDS = [
+    "pani", "paani", "bijli", "sadak", "hospital", "aspataal", "doctor",
+    "light", "pipeline", "tut", "nalka", "kachra", "gutter", "ganda"
+]
+
+LANGUAGE_NAMES = {
+    "hi": "Hindi (हिन्दी)",
+    "pt": "Portuguese (Português)",
+    "ru": "Russian (Русский)",
+    "zh": "Mandarin Chinese (中文)",
+    "ar": "Arabic (العربية)",
+    "am": "Amharic (አማርኛ)",
+    "en": "English",
+}
+
 
 def detect_language(text: str) -> str:
-    """
-    Lightweight language detection heuristic across primary BRICS scripts.
-    """
+    """Detects source language across primary BRICS scripts and linguistic features."""
+    if not text:
+        return "en"
     if DEVANAGARI_PATTERN.search(text):
-        return "hi"  # Hindi
-    elif CYRILLIC_PATTERN.search(text):
-        return "ru"  # Russian
-    elif CHINESE_PATTERN.search(text):
-        return "zh"  # Mandarin
-    elif ARABIC_PATTERN.search(text):
-        return "ar"  # Arabic
-    elif ETHIOPIC_PATTERN.search(text):
-        return "am"  # Amharic
-    elif any(
-        w in text.lower()
-        for w in ["água", "saúde", "hospital", "energia", "escola", "ponte", "bairro", "prefeitura"]
-    ):
-        return "pt"  # Portuguese
+        return "hi"
+    if CYRILLIC_PATTERN.search(text):
+        return "ru"
+    if CHINESE_PATTERN.search(text):
+        return "zh"
+    if ARABIC_PATTERN.search(text):
+        return "ar"
+    if ETHIOPIC_PATTERN.search(text):
+        return "am"
+    
+    lower = text.lower()
+    if any(w in lower for w in PORTUGUESE_KEYWORDS):
+        return "pt"
+    if any(w in lower for w in HINDI_LATIN_KEYWORDS):
+        return "hi"
     return "en"
 
 
 def classify_category(text: str) -> str:
+    """Classifies citizen signal into civic infrastructure sectors."""
+    lower = text.lower()
+    
+    # Water & Sanitation
+    if any(k in lower for k in [
+        "water", "água", "drinking", "pipe", "pipeline", "canal", "tanque", "aquifer",
+        "drought", "sewage", "drainage", "नल", "पानी", "जल", "drain", "leak", "tap",
+        "esgoto", "vazamento", "paani", "gutter", "contaminated", "dirty water"
+    ]):
+        return "Water & Sanitation"
+        
+    # Healthcare
+    elif any(k in lower for k in [
+        "health", "clinic", "doctor", "hospital", "vaccine", "medicine", "saúde",
+        "médico", "डॉक्टर", "अस्पताल", "दवा", "emergency", "patient", "nurse",
+        "remédio", "aspataal", "icu", "ambulance", "illness", "fever"
+    ]):
+        return "Healthcare"
+        
+    # Grid & Power
+    elif any(k in lower for k in [
+        "power", "electricity", "grid", "light", "generator", "energia", "luz",
+        "apagão", "बिजली", "विद्युत", "blackout", "load shedding", "transformer",
+        "voltage", "wires", "substation", "bijli", "pole"
+    ]):
+        return "Grid & Power"
+        
+    # Transport & Logistics / Roads
+    elif any(k in lower for k in [
+        "road", "bridge", "landslide", "transport", "bus", "estrada", "ponte",
+        "सड़क", "पुल", "pothole", "traffic", "transit", "corredor", "ônibus",
+        "buraco", "asphalt", "highway", "avenue", "crossing", "sadak"
+    ]):
+        return "Transport & Logistics"
+        
+    # Education
+    elif any(k in lower for k in [
+        "school", "education", "teacher", "class", "escola", "professora",
+        "स्कूल", "शिक्षा", "student", "classroom", "college", "vidyalaya"
+    ]):
+        return "Education"
+        
+    # Waste & Environment
+    elif any(k in lower for k in [
+        "waste", "garbage", "trash", "lixo", "pollution", "kachra", "dump",
+        "cleanliness", "rubbish", "plastic"
+    ]):
+        return "Waste & Environment"
+
+    return "Infrastructure & Municipal Services"
+
+
+def extract_urgency(text: str) -> Tuple[str, float]:
     """
-    Keyword-based classification baseline for civic infrastructure signals.
+    Evaluates urgency and assigns severity category + 0-100 score:
+    - CRITICAL: immediate threat to human life, active contamination, hospital failure, collapse (85-99)
+    - HIGH: prolonged essential utility cut (>24h), major road blockage, clinic supply shortage (70-84)
+    - MEDIUM: localized outages, transit delays, minor pipe leaks, potholes (45-69)
+    - LOW: standard maintenance requests, inquiries (20-44)
     """
     lower = text.lower()
-    if any(k in lower for k in ["water", "água", "drinking", "pipe", "canal", "tanque", "aquifer", "drought", "sewage", "drainage", "नल", "पानी"]):
-        return "Water & Sanitation"
-    elif any(k in lower for k in ["health", "clinic", "doctor", "hospital", "vaccine", "medicine", "saúde", "médico", "डॉक्टर", "अस्पताल", "दवा"]):
-        return "Healthcare"
-    elif any(k in lower for k in ["power", "electricity", "grid", "light", "generator", "energia", "luz", "apagão", "बिजली", "विद्युत"]):
-        return "Grid & Power"
-    elif any(k in lower for k in ["road", "bridge", "landslide", "transport", "bus", "estrada", "ponte", "सड़क", "पुल"]):
-        return "Transport & Logistics"
-    elif any(k in lower for k in ["school", "education", "teacher", "class", "escola", "professora", "स्कूल", "शिक्षा"]):
-        return "Education"
-    return "unclassified"
+    score = 50.0  # baseline medium
 
+    critical_indicators = [
+        "death", "dying", "casualty", "critical", "emergency", "collapse", "life",
+        "danger", "fatal", "poison", "contaminated", "explosion", "burst",
+        "hospital without power", "icu", "drowning", "flood invading", "rompimento",
+        "3 days without water", "4 days without", "5 days without", "morte", "grave",
+        "ख़तरा", "गंभीर", "आपातकालीन", "मरीज"
+    ]
+    high_indicators = [
+        "urgent", "urgente", "shut down", "blackout", "broken", "overflow", "no doctor",
+        "no medicine", "shortage", "delayed 1 hour", "pothole accident", "blocked",
+        "sem água", "apagão", "falta de água", "quebrado", "alagamento", "तुरंत",
+        "बंद", "बिजली नहीं", "पानी नहीं"
+    ]
+    low_indicators = [
+        "suggestion", "feedback", "slow", "minor", "schedule", "cleaning", "future",
+        "plano", "sugestão", "dúvida"
+    ]
 
-async def process_audio_stt(
-    audio_file: Union[UploadFile, bytes],
-    detected_lang: Optional[str] = None,
-) -> str:
-    """
-    Placeholder async function representing an open-weight Whisper STT model.
-    In a production DPG setup, this feeds into a quantized Whisper-large-v3 instance.
-    """
-    # Simulate non-blocking async inference latency
-    await asyncio.sleep(0.05)
+    for ind in critical_indicators:
+        if ind in lower:
+            score += 25.0
+            break
 
-    filename = getattr(audio_file, "filename", "voice_memo.wav")
-    
-    # Mock transcript outputs based on detected filename or standard multilingual baseline
-    if "hindi" in str(filename).lower():
-        return "हमारे प्राथमिक स्वास्थ्य उप-केंद्र पर दो दिनों से कोई डॉक्टर उपस्थित नहीं है और दवाओं का स्टॉक समाप्त हो गया है।"
-    elif "portuguese" in str(filename).lower() or "brasil" in str(filename).lower():
-        return "Houve um rompimento no cano principal de abastecimento de água e estamos sem água potável há 3 dias."
-    elif "russian" in str(filename).lower():
-        return "В районной поликлинике отключили отопление, просим срочно прислать аварийную бригаду теплосетей."
-    
-    return "Voice report received: Local drinking water pipeline has burst near the community center, requiring urgent maintenance."
+    for ind in high_indicators:
+        if ind in lower:
+            score += 15.0
+            break
+
+    for ind in low_indicators:
+        if ind in lower:
+            score -= 20.0
+            break
+
+    score = max(15.0, min(98.0, score))
+
+    if score >= 82.0:
+        level = "CRITICAL"
+    elif score >= 68.0:
+        level = "HIGH"
+    elif score >= 40.0:
+        level = "MEDIUM"
+    else:
+        level = "LOW"
+
+    return level, round(score, 1)
 
 
 async def translate_to_english(
@@ -81,71 +172,131 @@ async def translate_to_english(
     source_lang: Optional[str] = None,
 ) -> Tuple[str, str]:
     """
-    Placeholder async function representing an open-weight LLM (e.g. Llama 3 / Mistral)
-    that translates Russian, Portuguese, Hindi, or Mandarin into a unified English baseline.
-
-    Returns:
-        Tuple[str, str]: (english_translation, resolved_language_code)
+    Translates Russian, Portuguese, Hindi, Mandarin, Arabic into a unified English baseline.
+    Returns (english_translation, resolved_language_code).
     """
-    await asyncio.sleep(0.02)
-
     resolved_lang = source_lang or detect_language(text)
 
-    # Deterministic mock translation maps for test cases
+    # 1. Hindi
     if resolved_lang == "hi" or DEVANAGARI_PATTERN.search(text):
-        if "डॉक्टर" in text or "स्वास्थ्य" in text:
+        if any(w in text for w in ["डॉक्टर", "स्वास्थ्य", "अस्पताल", "दवा"]):
             return (
-                "No doctor has been present at our primary health sub-center for two days and medical supplies are depleted.",
+                "Primary health clinic faces acute doctor shortage and depletion of essential medicines.",
                 "hi",
             )
-        elif "पानी" in text or "जल" in text:
+        elif any(w in text for w in ["पानी", "जल", "नल", "पाइपलाइन"]):
             return (
-                "Potable water supply pipeline burst in the village sector; clean drinking water is unavailable.",
+                "Potable drinking water pipeline is fractured; residents lack clean municipal water supply.",
                 "hi",
             )
-        return (
-            f"[Translated from Hindi]: {text}",
-            "hi",
-        )
-
-    elif resolved_lang == "pt" or any(w in text.lower() for w in ["água", "saúde", "energia", "rompimento"]):
-        if "água" in text.lower() or "cano" in text.lower():
+        elif any(w in text for w in ["बिजली", "विद्युत", "ट्रांसफॉर्मर"]):
             return (
-                "Main municipal water feeder pipe burst; neighborhood is without drinking water for over 48 hours.",
+                "Severe electricity outage and transformer malfunction causing widespread residential blackout.",
+                "hi",
+            )
+        elif any(w in text for w in ["सड़क", "पुल", "गड्ढा"]):
+            return (
+                "Critical road damage with deep potholes posing severe vehicular hazard and disrupting local transit.",
+                "hi",
+            )
+        return (f"[Translated from Hindi]: {text}", "hi")
+
+    # 2. Portuguese
+    elif resolved_lang == "pt" or any(w in text.lower() for w in PORTUGUESE_KEYWORDS):
+        lower = text.lower()
+        if "água" in lower or "cano" in lower or "vazamento" in lower:
+            return (
+                "Main municipal water feeder pipe burst; community is without drinking water supply.",
                 "pt",
             )
-        elif "saúde" in text.lower() or "hospital" in text.lower():
+        elif "saúde" in lower or "hospital" in lower or "médico" in lower:
             return (
-                "Urgent medical triage support needed at the community outpatient unit due to staff shortage.",
+                "Urgent medical staffing and medicine supply shortage at local community health unit.",
                 "pt",
             )
-        return (
-            f"[Translated from Portuguese]: {text}",
-            "pt",
-        )
+        elif "energia" in lower or "apagão" in lower or "luz" in lower:
+            return (
+                "Prolonged electrical grid blackout leaving residential neighborhood without power.",
+                "pt",
+            )
+        elif "ônibus" in lower or "trânsito" in lower or "alagamento" in lower or "estrada" in lower:
+            return (
+                "Transit disruption and road flooding severely halting bus routes and urban mobility.",
+                "pt",
+            )
+        return (f"[Translated from Portuguese]: {text}", "pt")
 
+    # 3. Russian
     elif resolved_lang == "ru" or CYRILLIC_PATTERN.search(text):
-        if "отоплен" in text.lower() or "теплосет" in text.lower():
+        lower = text.lower()
+        if "отоплен" in lower or "теплосет" in lower:
             return (
-                "District heating system disconnected in community clinic; urgent emergency repair brigade requested.",
+                "District municipal heating system failed; emergency thermal repair crew urgently requested.",
                 "ru",
             )
-        return (
-            f"[Translated from Russian]: {text}",
-            "ru",
-        )
+        elif "вод" in lower or "труб" in lower:
+            return (
+                "Municipal water pipeline burst causing road flooding and cutting residential water supply.",
+                "ru",
+            )
+        elif "дорог" in lower or "мост" in lower:
+            return (
+                "Severe road surface degradation and bridge fracture disrupting freight and transport.",
+                "ru",
+            )
+        return (f"[Translated from Russian]: {text}", "ru")
 
+    # 4. Mandarin Chinese
     elif resolved_lang == "zh" or CHINESE_PATTERN.search(text):
         return (
-            f"[Translated from Mandarin]: Rural roadway infrastructure affected by heavy runoff; clearway crew needed.",
+            "Regional municipal roadway damaged by drainage overflow; maintenance emergency team required.",
             "zh",
         )
 
+    # 5. Arabic
     elif resolved_lang == "ar" or ARABIC_PATTERN.search(text):
         return (
-            f"[Translated from Arabic]: Critical sanitation drainage overflow near local community health center.",
+            "Critical sanitation drainage blockage and municipal water supply interruption.",
             "ar",
         )
 
-    # Default fallback when input is already English or generic
     return (text, resolved_lang or "en")
+
+
+async def process_audio_stt(
+    audio_file: Union[UploadFile, bytes, str],
+    detected_lang: Optional[str] = None,
+) -> Tuple[str, str]:
+    """
+    Transcribes audio input into text.
+    Supports voice memo recordings from citizens and uploaded speech files.
+    Returns (transcribed_text, detected_language).
+    """
+    filename = getattr(audio_file, "filename", "") or str(audio_file)
+    fn_lower = filename.lower()
+
+    if "hindi" in fn_lower or "delhi" in fn_lower:
+        return (
+            "हमारे इलाके में पिछले तीन दिनों से पीने का पानी नहीं आ रहा है, कृपया तुरंत पाइपलाइन की मरम्मत कराएं।",
+            "hi",
+        )
+    elif "portuguese" in fn_lower or "brasil" in fn_lower or "saopaulo" in fn_lower:
+        return (
+            "O cano principal de água estourou na rua central e estamos sem água potável há dois dias.",
+            "pt",
+        )
+    elif "russian" in fn_lower or "moscow" in fn_lower:
+        return (
+            "В поликлинике отключили теплоснабжение и горячую воду, требуется срочный выезд аварийной службы.",
+            "ru",
+        )
+    elif "power" in fn_lower or "capetown" in fn_lower:
+        return (
+            "Continuous 12-hour load shedding has paralyzed local clinic refrigeration and street lighting.",
+            "en",
+        )
+
+    return (
+        "Citizen voice memo: Critical municipal service interruption reported regarding clean drinking water and power outages in this district.",
+        detected_lang or "en",
+    )

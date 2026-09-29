@@ -1,113 +1,70 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import {
-  Bell,
-  Search,
-  Globe,
   Database,
-  Activity,
-  Layers,
-  ChevronDown,
-  Sparkles,
+  PlusCircle,
+  Mic,
+  Trash2,
 } from "lucide-react";
 
 interface TopHeaderProps {
   selectedRegion: string;
   setSelectedRegion: (region: string) => void;
+  onOpenReportModal?: () => void;
+  onClearDatabase?: () => void;
+  dbRecordCount?: number;
 }
 
 export const TopHeader: React.FC<TopHeaderProps> = ({
-  selectedRegion,
-  setSelectedRegion,
+  onOpenReportModal,
+  onClearDatabase,
+  dbRecordCount = 0,
 }) => {
-  const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("English (Official)");
-
-  const languages = [
-    "English (Official)",
-    "Português (Brasil)",
-    "Русский (Россия)",
-    "हिन्दी (India)",
-    "中文 (China)",
-    "isiZulu (South Africa)",
-    "العربية (Egypt / UAE)",
-    "አማርኛ (Ethiopia)",
-    "فارسی (Iran)",
-  ];
-
   return (
-    <header className="h-14 bg-card border-b border-slate-200 px-4 md:px-6 flex items-center justify-between gap-4 shrink-0 shadow-sm z-20">
-      {/* Left: Platform Title & Breadcrumb */}
+    <header className="h-14 bg-card border-b border-slate-200 px-4 md:px-6 flex items-center justify-between gap-4 shrink-0 shadow-xs z-20">
+      {/* Left: Platform Title */}
       <div className="flex items-center gap-3">
         <div className="flex items-center gap-2">
-          <span className="text-xs font-bold text-primary tracking-tight">
-            Policymaker Strategic Operations
+          <span className="text-sm font-bold text-primary tracking-tight">
+            CivicPulse
           </span>
           <span className="text-slate-300">/</span>
           <span className="text-xs text-text-muted font-medium">
-            BRICS Multilateral Synthesis Node
+            Citizen Grievance & Infrastructure Resolution Platform
           </span>
         </div>
       </div>
 
-      {/* Right: Live Telemetry & Actions */}
+      {/* Right: Real Actions & Real DBMS Indicator */}
       <div className="flex items-center gap-3">
-        {/* Backend & DB Status Pills */}
-        <div className="hidden lg:flex items-center gap-2 text-[11px] font-mono">
-          <div className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-slate-50 border border-slate-200 text-slate-700">
-            <Database className="w-3 h-3 text-accent" />
-            <span>PostGIS:</span>
-            <span className="text-emerald-600 font-bold">14 Active Hotspots</span>
-          </div>
-          <div className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-slate-50 border border-slate-200 text-slate-700">
-            <Activity className="w-3 h-3 text-emerald-500 animate-pulse" />
-            <span>FastAPI:</span>
-            <span className="text-emerald-600 font-bold">8000/OK</span>
-          </div>
+        {/* Real DBMS Indicator */}
+        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200 text-slate-700 text-xs font-mono">
+          <Database className="w-3.5 h-3.5 text-accent" />
+          <span>DBMS Stored:</span>
+          <span className="text-accent font-bold">{dbRecordCount} {dbRecordCount === 1 ? "Problem" : "Problems"}</span>
         </div>
 
-        {/* Multilingual Selector */}
-        <div className="relative">
+        {/* Clear All Problems Button */}
+        {dbRecordCount > 0 && onClearDatabase && (
           <button
-            onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
-            className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-slate-200 hover:bg-slate-50 text-xs font-medium text-slate-700 transition-colors"
+            onClick={onClearDatabase}
+            className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg border border-rose-200 hover:bg-rose-50 text-rose-700 font-medium text-xs transition-colors"
+            title="Clear all problems to start with a fresh slate"
           >
-            <Globe className="w-3.5 h-3.5 text-accent" />
-            <span className="truncate max-w-[120px]">{selectedLanguage}</span>
-            <ChevronDown className="w-3 h-3 text-slate-400" />
+            <Trash2 className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">Reset / Clear All</span>
           </button>
+        )}
 
-          {showLanguageDropdown && (
-            <div className="absolute right-0 mt-1.5 w-48 bg-card rounded-lg shadow-xl border border-slate-200 py-1 z-50 text-xs animate-in fade-in-50">
-              <div className="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-text-muted border-b border-slate-100">
-                Official Working Languages
-              </div>
-              {languages.map((lang) => (
-                <button
-                  key={lang}
-                  onClick={() => {
-                    setSelectedLanguage(lang);
-                    setShowLanguageDropdown(false);
-                  }}
-                  className={`w-full text-left px-3 py-1.5 hover:bg-slate-50 transition-colors ${
-                    selectedLanguage === lang ? "text-accent font-semibold bg-teal-50/50" : "text-slate-700"
-                  }`}
-                >
-                  {lang}
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
-
-        {/* Notifications */}
+        {/* Prominent Add Problem Button */}
         <button
-          className="p-2 rounded-lg text-slate-500 hover:text-primary hover:bg-slate-100 transition-colors relative"
-          title="Citizen Alert Notifications"
+          onClick={onOpenReportModal}
+          className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-accent text-white hover:bg-teal-700 font-semibold text-xs shadow-sm transition-all active:scale-95"
+          title="Submit a citizen problem using voice speech or text"
         >
-          <Bell className="w-4 h-4" />
-          <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-alert-critical ring-2 ring-white" />
+          <Mic className="w-3.5 h-3.5 text-white" />
+          <span>+ Add Problem (Voice / Text)</span>
         </button>
       </div>
     </header>

@@ -1,7 +1,20 @@
+from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
+from app.core.database import init_db
 from app.api.routes import health, ingestion_router, analytics_router
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Initialize DBMS tables (SQLite / PostgreSQL)
+    try:
+        await init_db()
+    except Exception as err:
+        print(f"Database initialization notice: {err}")
+    yield
+
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -10,6 +23,7 @@ app = FastAPI(
     docs_url="/docs",
     redoc_url="/redoc",
     openapi_url="/openapi.json",
+    lifespan=lifespan,
 )
 
 # CORS Configuration
@@ -42,4 +56,4 @@ async def root():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)

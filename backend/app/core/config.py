@@ -21,8 +21,12 @@ class Settings(BaseSettings):
             return [i.strip() for i in v.split(",") if i.strip()]
         return v
 
+    # DBMS Configuration: Supports SQLite (zero-setup) and PostgreSQL
+    DATABASE_TYPE: str = "sqlite"
+    SQLITE_PATH: str = "civicpulse.db"
+
     # PostgreSQL / PostGIS Database Configuration
-    POSTGRES_SERVER: str = "postgres"
+    POSTGRES_SERVER: str = "localhost"
     POSTGRES_PORT: int = 5432
     POSTGRES_USER: str = "civicpulse_user"
     POSTGRES_PASSWORD: str = "civicpulse_pass"
@@ -30,7 +34,9 @@ class Settings(BaseSettings):
     
     @property
     def DATABASE_URL(self) -> str:
-        return f"postgresql+asyncpg://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}@{self.POSTGRES_SERVER}:{self.POSTGRES_PORT}/{self.POSTGRES_DB}"
+        if self.DATABASE_TYPE.lower() == "postgres":
+            return f"postgresql+asyncpg://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}@{self.POSTGRES_SERVER}:{self.POSTGRES_PORT}/{self.POSTGRES_DB}"
+        return f"sqlite+aiosqlite:///{self.SQLITE_PATH}"
 
     # Redis Configuration
     REDIS_HOST: str = "redis"

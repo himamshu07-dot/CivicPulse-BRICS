@@ -1,16 +1,22 @@
 export interface CitizenRequest {
   id: string;
   timestamp: string;
-  relativeTime: string;
-  languageCode: string;
+  relativeTime?: string;
+  languageCode?: string;
+  language?: string;
   languageName: string;
   originalText: string;
   translatedText: string;
-  category: "Healthcare" | "Water" | "Power" | "Infrastructure" | "Education" | "Sanitation";
-  countryCode: "IN" | "BR" | "ZA" | "CN" | "RU" | "EG" | "ET" | "IR" | "AE";
-  countryName: string;
-  urgency: "critical" | "high" | "normal";
+  category: string;
+  countryCode: string;
+  countryName?: string;
+  country?: string;
+  urgency: string;
+  urgencyScore?: number;
+  duplicateCount?: number;
   region: string;
+  channel?: string;
+  coordinates?: [number, number];
 }
 
 export const MOCK_CITIZEN_REQUESTS: CitizenRequest[] = [

@@ -1,0 +1,94 @@
+services:
+  # PostgreSQL Database with PostGIS Geospatial Extension
+  postgres:
+    image: postgis/postgis:16-3.4
+    container_name: civicpulse_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-civicpulse_db}
+      POSTGRES_USER: ${POSTGRES_USER:-civicpulse_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-civicpulse_pass}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - civicpulse_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-civicpulse_user} -d ${POSTGRES_DB:-civicpulse_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # Redis In-Memory Cache and Celery Message Broker
+  redis:
+    image: redis:7-alpine
+    container_name: civicpulse_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - civicpulse_network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # FastAPI Backend Service
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: civicpulse_backend
+    restart: unless-stopped
+    environment:
+      PROJECT_NAME: "CivicPulse BRICS"
+      POSTGRES_SERVER: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: ${POSTGRES_USER:-civicpulse_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-civicpulse_pass}
+      POSTGRES_DB: ${POSTGRES_DB:-civicpulse_db}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      CORS_ORIGINS: '["http://localhost:3000","http://127.0.0.1:3000","http://frontend:3000"]'
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/backend
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - civicpulse_network
+
+  # Next.js Frontend Service
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: civicpulse_frontend
+    restart: unless-stopped
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+      INTERNAL_API_URL: http://backend:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - civicpulse_network
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  civicpulse_network:
+    driver: bridge

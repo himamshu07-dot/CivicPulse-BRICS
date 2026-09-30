@@ -38,6 +38,10 @@ class Settings(BaseSettings):
             return f"postgresql+asyncpg://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}@{self.POSTGRES_SERVER}:{self.POSTGRES_PORT}/{self.POSTGRES_DB}"
         return f"sqlite+aiosqlite:///{self.SQLITE_PATH}"
 
+    # AI & LLM Engine Configuration (Google Gemini)
+    GEMINI_API_KEY: str = ""
+    GEMINI_MODEL: str = "gemini-2.5-flash"
+
     # Redis Configuration
     REDIS_HOST: str = "redis"
     REDIS_PORT: int = 6379
@@ -55,3 +59,4 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+

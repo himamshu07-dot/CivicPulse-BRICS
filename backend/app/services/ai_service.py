@@ -1,6 +1,11 @@
 import json
+import logging
 import re
-from typing import Any, Dict, List, Union
+from typing import Any, Dict, List, Optional, Union
+import httpx
+from app.core.config import settings
+
+logger = logging.getLogger(__name__)
 
 # Exact System Prompt as Specified by Policy Architecture
 SYSTEM_PROMPT = (
@@ -29,16 +34,70 @@ def format_llm_user_prompt(requests: List[Union[str, Dict[str, Any]]]) -> str:
     )
 
 
+def call_gemini_api(prompt_text: str) -> Optional[Dict[str, str]]:
+    """
+    Calls Google Gemini 2.5 Flash API if GEMINI_API_KEY is configured.
+    Returns structured {title, justification} or None on error/missing key.
+    """
+    api_key = settings.GEMINI_API_KEY.strip()
+    if not api_key:
+        return None
+
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{settings.GEMINI_MODEL}:generateContent?key={api_key}"
+    payload = {
+        "contents": [
+            {
+                "parts": [
+                    {"text": f"{SYSTEM_PROMPT}\n\n{prompt_text}"}
+                ]
+            }
+        ],
+        "generationConfig": {
+            "responseMimeType": "application/json",
+            "temperature": 0.2
+        }
+    }
+    try:
+        with httpx.Client(timeout=6.0) as client:
+            resp = client.post(url, json=payload)
+            if resp.status_code == 200:
+                data = resp.json()
+                candidates = data.get("candidates", [])
+                if candidates:
+                    parts = candidates[0].get("content", {}).get("parts", [])
+                    if parts:
+                        parsed = json.loads(parts[0].get("text", "{}"))
+                        if "title" in parsed and "justification" in parsed:
+                            return {
+                                "title": str(parsed["title"])[:90],
+                                "justification": str(parsed["justification"]),
+                            }
+    except Exception as e:
+        logger.warning(f"Gemini API request failed, falling back to local NLU engine: {e}")
+    return None
+
+
 def generate_cluster_insight(requests: List[Union[str, Dict[str, Any]]]) -> Dict[str, str]:
     """
-    Executes the LLM infrastructure policy advisor logic against the clustered citizen requests.
-    Formats requests into the exact system prompt and synthesizes a structured title & 2-sentence justification.
+    Executes the LLM infrastructure policy advisor logic against clustered citizen requests.
+    If GEMINI_API_KEY is set, calls Gemini 2.5 Flash API.
+    Otherwise, gracefully falls back to the deterministic local offline NLU engine.
     """
     if not requests:
         return {
             "title": "Municipal Infrastructure Stabilization Initiative",
             "justification": "Localized citizen reports indicate acute municipal service interruptions requiring immediate intervention. Rapid deployment will prevent further economic downtime and restore baseline community wellbeing.",
         }
+
+    # 1. Try Gemini 2.5 Flash if API key is provided
+    if settings.GEMINI_API_KEY.strip():
+        prompt = format_llm_user_prompt(requests)
+        gemini_insight = call_gemini_api(prompt)
+        if gemini_insight:
+            return gemini_insight
+
+    # 2. Resilient Offline Local NLU Engine Fallback
+
 
     # Extract all text contents for semantic analysis
     all_texts: List[str] = []

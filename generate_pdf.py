@@ -161,7 +161,7 @@ def create_script_pdf():
                 "• Click the neon button <b>'[ + Report Problem ]'</b> in the top right.<br/>"
                 "• In the modal, point to the BRICS Country dropdown (India selected).<br/>"
                 "• Click <b>'Detect Current GPS'</b> OR type <i>'Ward 42, Rohini Sector 16, New Delhi'</i> into the location box.<br/>"
-                "• Click the microphone OR click preset <b>'🇮🇳 India — Water Pipeline Rupture (Hindi)'</b>.<br/>"
+                "• Click the microphone OR click preset <b>'India — Water Pipeline Rupture (Hindi)'</b>.<br/>"
                 "• Point to the <b>'Live AI Inference Preview'</b> card lighting up below the text box."
             ),
             "spoken": (
@@ -171,8 +171,8 @@ def create_script_pdf():
                 "Citizens select their BRICS member nation, and they can either type their exact neighborhood street or click "
                 "<b>'Detect Current GPS'</b> to bind their coordinates automatically.<br/><br/>"
                 "Next, they dictate naturally in their mother tongue.<br/><br/>"
-                "Watch this: A citizen in New Delhi speaks in Hindi: <i>'हमारे वार्ड में 4 दिनों से मुख्य पेयजल पाइपलाइन टूटी हुई है और अस्पताल में मरीज परेशान हैं।'</i><br/><br/>"
-                "Immediately, notice our <b>Live AI Inference Preview</b>: it automatically transcribes the Hindi text, "
+                "Watch this: A citizen in New Delhi speaks in Hindi: <i>'Hamare ward mein 4 dino se main drinking water pipeline tooti hui hai aur hospital mein patients pareshan hain.'</i><br/><br/>"
+                "Immediately, notice our <b>Live AI Inference Preview</b>: it automatically transcribes the Hindi speech, "
                 "routes it to our Indic transformer, classifies the sector as <b>Water & Sanitation</b>, and assesses a "
                 "critical urgency score in real time before even hitting the database.\""
             ),

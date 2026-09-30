@@ -1,12 +1,7 @@
 import asyncio
-import logging
 import re
 from typing import Any, Dict, List, Optional, Tuple, Union
 from fastapi import UploadFile
-import httpx
-from app.core.config import settings
-
-logger = logging.getLogger(__name__)
 
 # Script detection regex patterns
 CYRILLIC_PATTERN = re.compile(r"[\u0400-\u04FF]")
@@ -172,61 +167,15 @@ def extract_urgency(text: str) -> Tuple[str, float]:
     return level, round(score, 1)
 
 
-async def call_gemini_translation(text: str, source_lang: str) -> Optional[str]:
-    """Calls Gemini 2.5 Flash API for multilingual translation if GEMINI_API_KEY is present."""
-    api_key = settings.GEMINI_API_KEY.strip()
-    if not api_key:
-        return None
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{settings.GEMINI_MODEL}:generateContent?key={api_key}"
-    prompt = (
-        f"You are a translation assistant for a civic infrastructure platform. "
-        f"Translate the following citizen report (source language: {source_lang}) accurately into clear, formal English. "
-        f"Output ONLY the translated English text, nothing else.\n\n"
-        f"Text to translate:\n\"{text}\""
-    )
-    payload = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": 0.1, "maxOutputTokens": 200}
-    }
-    try:
-        async with httpx.AsyncClient(timeout=5.0) as client:
-            resp = await client.post(url, json=payload)
-            if resp.status_code == 200:
-                data = resp.json()
-                candidates = data.get("candidates", [])
-                if candidates:
-                    parts = candidates[0].get("content", {}).get("parts", [])
-                    if parts:
-                        translated = parts[0].get("text", "").strip().strip('"')
-                        if translated:
-                            return translated
-    except Exception as e:
-        logger.warning(f"Gemini translation failed, using offline fallback: {e}")
-    return None
-
-
 async def translate_to_english(
     text: str,
     source_lang: Optional[str] = None,
 ) -> Tuple[str, str]:
     """
     Translates Russian, Portuguese, Hindi, Mandarin, Arabic into a unified English baseline.
-    Uses Gemini 2.5 Flash if GEMINI_API_KEY is set, with deterministic local fallback.
     Returns (english_translation, resolved_language_code).
     """
     resolved_lang = source_lang or detect_language(text)
-
-    # If already English, return directly
-    if resolved_lang == "en" and not (DEVANAGARI_PATTERN.search(text) or CYRILLIC_PATTERN.search(text) or CHINESE_PATTERN.search(text)):
-        return (text, "en")
-
-    # 1. Try Gemini 2.5 Flash if API key is present
-    if settings.GEMINI_API_KEY.strip():
-        gemini_res = await call_gemini_translation(text, resolved_lang)
-        if gemini_res:
-            return (gemini_res, resolved_lang)
-
-    # 2. Resilient Offline Local Fallback
 
     # 1. Hindi
     if resolved_lang == "hi" or DEVANAGARI_PATTERN.search(text):

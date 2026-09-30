@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { API_BASE_URL } from "@/lib/api";
 import {
   Mic,
   MicOff,
@@ -260,7 +261,7 @@ export const CitizenReportModal: React.FC<CitizenReportModalProps> = ({
         region: customLocation.trim(),
       };
 
-      const res = await fetch("http://localhost:8000/api/v1/ingest/text", {
+      const res = await fetch(`${API_BASE_URL}/api/v1/ingest/text`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -275,8 +276,9 @@ export const CitizenReportModal: React.FC<CitizenReportModalProps> = ({
       onReportSubmitted();
     } catch (err: any) {
       console.error("Submission failed:", err);
-      setErrorMessage("Failed to connect to backend on http://localhost:8000. Ensure the FastAPI service is running.");
+      setErrorMessage(`Failed to connect to backend (${API_BASE_URL}). Ensure the FastAPI service is running.`);
     } finally {
+
       setIsSubmitting(false);
     }
   };

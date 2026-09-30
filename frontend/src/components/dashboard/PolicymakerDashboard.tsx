@@ -1,7 +1,9 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
+import { API_BASE_URL } from "@/lib/api";
 import { Sidebar } from "./Sidebar";
+
 import { TopHeader } from "./TopHeader";
 import { ProblemsDirectory } from "./ProblemsDirectory";
 import { AIPriorityProjects } from "./AIPriorityProjects";
@@ -26,7 +28,7 @@ export const PolicymakerDashboard: React.FC = () => {
     setIsLoading(true);
     try {
       // 1. Fetch real citizen requests stored in SQLite DBMS
-      const res = await fetch("http://localhost:8000/api/v1/requests?limit=100");
+      const res = await fetch(`${API_BASE_URL}/api/v1/requests?limit=100`);
       if (res.ok) {
         const data = await res.json();
         setProblems(Array.isArray(data) ? data : []);
@@ -34,7 +36,7 @@ export const PolicymakerDashboard: React.FC = () => {
 
       // 2. Fetch real synthesized AI projects based on the stored problems
       try {
-        const projRes = await fetch("http://localhost:8000/api/v1/hotspots");
+        const projRes = await fetch(`${API_BASE_URL}/api/v1/hotspots`);
         if (projRes.ok) {
           const projData = await projRes.json();
           if (projData.ai_projects) {
@@ -54,7 +56,7 @@ export const PolicymakerDashboard: React.FC = () => {
   // Delete a single problem
   const handleDeleteProblem = async (id: string) => {
     try {
-      const res = await fetch(`http://localhost:8000/api/v1/requests/${id}`, {
+      const res = await fetch(`${API_BASE_URL}/api/v1/requests/${id}`, {
         method: "DELETE",
       });
       if (res.ok) {
@@ -70,7 +72,7 @@ export const PolicymakerDashboard: React.FC = () => {
   const handleClearDatabase = async () => {
     if (confirm("Are you sure you want to delete all problems from the database to start fresh?")) {
       try {
-        const res = await fetch("http://localhost:8000/api/v1/requests", {
+        const res = await fetch(`${API_BASE_URL}/api/v1/requests`, {
           method: "DELETE",
         });
         if (res.ok) {
@@ -82,6 +84,7 @@ export const PolicymakerDashboard: React.FC = () => {
       }
     }
   };
+
 
   useEffect(() => {
     fetchProblemsData();

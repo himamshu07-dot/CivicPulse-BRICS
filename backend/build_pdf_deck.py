@@ -243,12 +243,13 @@ def build_pdf(output_path="../CIVICPULSE-BRICS.pdf"):
     # 6 cards
     pipe = [
         ("01", "VOICE /\nTEXT", False),
-        ("02", "GEMINI 2.5\nFLASH", False),
+        ("02", "MULTILINGUAL\nNLU", False),
         ("03", "0–100 ML\nSEVERITY", False),
         ("04", "10KM\nDBSCAN", False),
         ("05", "PRIORITY\nINDEX", False),
         ("06", "AI POLICY\nBRIEF", True),
     ]
+
     card_w = 130
     gap = 16
     for i, (num, label, hl) in enumerate(pipe):
@@ -284,7 +285,8 @@ def build_pdf(output_path="../CIVICPULSE-BRICS.pdf"):
     
     c.setFillColor(TEXT_MUTED)
     c.setFont("Helvetica", 11)
-    c.drawString(75, 125, "Gemini 2.5 Flash API  +  Scikit-Learn DBSCAN  +  Haversine Matrix  +  Zero-Setup SQLite / PostgreSQL")
+    c.drawString(75, 125, "Multilingual Transformer NLU  +  Scikit-Learn DBSCAN  +  Haversine Matrix  +  Zero-Setup SQLite / PostgreSQL")
+
 
     c.showPage()
 
@@ -345,7 +347,7 @@ def build_pdf(output_path="../CIVICPULSE-BRICS.pdf"):
     grid = [
         ("INPUT", "Citizen Portal · Voice | Text | Custom Location | BRICS Nation Selector", 50, 270, False),
         ("API", "FastAPI (Async Python 3.11 Backend) + Next.js 14 App Router", 350, 270, False),
-        ("AI", "Gemini 2.5 Flash · Multilingual NLU & Generative Project Solutions", 650, 270, False),
+        ("AI", "Multilingual NLU Engine · Dialect Synthesis & Project Solutions", 650, 270, False),
         ("DATA", "SQLite (Zero-Setup Engine) / PostgreSQL + PostGIS", 50, 120, False),
         ("INTELLIGENCE", "Scikit-Learn DBSCAN (10km Radius) + 0–100 ML Severity Scorer", 350, 120, False),
         ("OUTPUT", "Policymaker Command Center · Sector Health Matrix & Radar", 650, 120, True),

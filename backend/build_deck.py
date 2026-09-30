@@ -398,12 +398,13 @@ def create_deck(output_path="../CIVICPULSE-BRICS.pptx"):
     # 6 Sequential Pipeline Cards
     pipeline_steps = [
         ("01", "VOICE /\nTEXT", False),
-        ("02", "GEMINI 2.5\nFLASH", False),
+        ("02", "MULTILINGUAL\nNLU", False),
         ("03", "0–100 ML\nSEVERITY", False),
         ("04", "10KM\nDBSCAN", False),
         ("05", "PRIORITY\nINDEX", False),
         ("06", "AI POLICY\nBRIEF", True), # Highlighted
     ]
+
 
     card_w = Inches(1.8)
     card_gap = Inches(0.18)
@@ -460,10 +461,11 @@ def create_deck(output_path="../CIVICPULSE-BRICS.pptx"):
 
     p = tf_sum.add_paragraph()
     p.space_before = Pt(4)
-    p.text = "Gemini 2.5 Flash API  +  Scikit-Learn DBSCAN  +  Haversine Matrix  +  Zero-Setup SQLite / PostgreSQL"
+    p.text = "Multilingual Transformer NLU  +  Scikit-Learn DBSCAN  +  Haversine Matrix  +  Zero-Setup SQLite / PostgreSQL"
     p.font.name = "Arial"
     p.font.size = Pt(14)
     p.font.color.rgb = TEXT_MUTED
+
 
     # ==========================================
     # SLIDE 6: DECISION SURFACE
@@ -567,7 +569,7 @@ def create_deck(output_path="../CIVICPULSE-BRICS.pptx"):
     arch_grid = [
         ("INPUT", "Citizen Portal · Voice | Text | Custom Location | BRICS Nation Selector", Inches(0.8), Inches(2.0), False),
         ("API", "FastAPI (Async Python 3.11 Backend) + Next.js 14 App Router", Inches(4.8), Inches(2.0), False),
-        ("AI", "Gemini 2.5 Flash · Multilingual NLU & Generative Project Solutions", Inches(8.8), Inches(2.0), False),
+        ("AI", "Multilingual NLU Engine · Dialect Synthesis & Project Solutions", Inches(8.8), Inches(2.0), False),
         ("DATA", "SQLite (Zero-Setup Engine) / PostgreSQL + PostGIS", Inches(0.8), Inches(4.0), False),
         ("INTELLIGENCE", "Scikit-Learn DBSCAN (10km Proximity) + 0–100 ML Severity Scorer", Inches(4.8), Inches(4.0), False),
         ("OUTPUT", "Policymaker Command Center · Sector Health Matrix & Autonomous Radar", Inches(8.8), Inches(4.0), True),

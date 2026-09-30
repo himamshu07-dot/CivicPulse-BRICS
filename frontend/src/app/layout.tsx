@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Merriweather } from "next/font/google";
+import { Inter, Fira_Code } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,10 +8,9 @@ const inter = Inter({
   display: "swap",
 });
 
-const merriweather = Merriweather({
-  weight: ["300", "400", "700", "900"],
+const firaCode = Fira_Code({
   subsets: ["latin", "cyrillic"],
-  variable: "--font-merriweather",
+  variable: "--font-fira-code",
   display: "swap",
 });
 
@@ -26,10 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${merriweather.variable}`}>
-      <body className="min-h-screen bg-background text-text-main antialiased font-sans">
+    <html lang="en" className={`${inter.variable} ${firaCode.variable} dark`}>
+      <body className="min-h-screen bg-background text-text-main antialiased font-sans selection:bg-accent selection:text-black">
         {children}
       </body>
     </html>
   );
 }
+

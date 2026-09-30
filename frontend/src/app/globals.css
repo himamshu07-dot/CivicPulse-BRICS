@@ -3,18 +3,103 @@
 @tailwind utilities;
 
 :root {
-  --background: #F8FAFC;
-  --card: #FFFFFF;
-  --primary: #1E293B;
-  --accent: #0F766E;
-  --alert-critical: #E11D48;
-  --alert-warn: #FBBF24;
-  --text-main: #0F172A;
-  --text-muted: #64748B;
+  --background: #090909;
+  --surface: #111111;
+  --surface-card: #161616;
+  --surface-card-hover: #1f1f1f;
+  --border: #282828;
+  --border-glow: #39FF14;
+  --accent: #39FF14;
+  --accent-bright: #a3ff00;
+  --accent-muted: #228b22;
+  --alert-critical: #FF3366;
+  --alert-warn: #FFCC00;
+  --text-main: #F0F0F0;
+  --text-muted: #A0A0A0;
+  --text-dim: #666666;
 }
 
 body {
   background-color: var(--background);
   color: var(--text-main);
+  background-image: radial-gradient(#222222 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0;
+  min-height: 100vh;
+  overflow-x: hidden;
   font-family: var(--font-inter), 'Inter', sans-serif;
 }
+
+/* Neon Text Glow & Shadows */
+.text-glow-green {
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.6), 0 0 20px rgba(57, 255, 20, 0.3);
+}
+
+.text-glow-white {
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+}
+
+.box-glow-green {
+  box-shadow: 0 0 15px -3px rgba(57, 255, 20, 0.3);
+}
+
+/* Ghost / Terminal Outline Buttons */
+.btn-terminal {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font-jetbrains-mono), monospace;
+  transition: all 0.2s ease;
+}
+
+.btn-terminal:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 10px -2px rgba(57, 255, 20, 0.4);
+}
+
+.btn-terminal-accent {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--font-jetbrains-mono), monospace;
+  box-shadow: 0 0 8px -2px rgba(57, 255, 20, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-terminal-accent:hover {
+  background: rgba(57, 255, 20, 0.1);
+  box-shadow: 0 0 15px 0px rgba(57, 255, 20, 0.5);
+}
+
+/* Terminal Card Style */
+.card-terminal {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-terminal:hover {
+  border-color: #383838;
+}
+
+/* Custom Monospace Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #282828;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+

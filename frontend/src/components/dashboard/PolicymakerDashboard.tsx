@@ -5,7 +5,9 @@ import { Sidebar } from "./Sidebar";
 import { TopHeader } from "./TopHeader";
 import { ProblemsDirectory } from "./ProblemsDirectory";
 import { AIPriorityProjects } from "./AIPriorityProjects";
+import { InfrastructureHealthMatrix } from "./InfrastructureHealthMatrix";
 import { CitizenReportModal } from "./CitizenReportModal";
+import { CyberCanvas } from "./CyberCanvas";
 import { CitizenRequest } from "@/data/mockRequests";
 import { AIProjectRecommendation } from "@/data/mockProjects";
 
@@ -14,7 +16,7 @@ export const PolicymakerDashboard: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("ALL");
   const [isReportModalOpen, setIsReportModalOpen] = useState<boolean>(false);
 
-  // Live DBMS data states (starts with ONLY real data from database)
+  // Live DBMS data states
   const [problems, setProblems] = useState<CitizenRequest[]>([]);
   const [aiProjects, setAiProjects] = useState<AIProjectRecommendation[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -89,23 +91,24 @@ export const PolicymakerDashboard: React.FC = () => {
   }, [fetchProblemsData]);
 
   return (
-    <div className="flex h-screen w-screen overflow-hidden bg-background text-text-main font-sans">
-      {/* 1. Left Sidebar Navigation (Real, purposeful tabs) */}
+    <div className="flex h-screen w-screen overflow-hidden bg-background text-text-main font-sans relative">
+      {/* Interactive Cyber Constellation Backdrop */}
+      <CyberCanvas />
+
+      {/* 1. Left Sidebar Navigation */}
       <Sidebar
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
-        onOpenReportModal={() => setIsReportModalOpen(true)}
         problemCount={problems.length}
       />
 
       {/* Main Content Area */}
-      <div className="flex-1 flex flex-col min-w-0 h-screen overflow-hidden bg-background">
-        {/* Top Header with Real Actions and Real DBMS Count */}
+      <div className="flex-1 flex flex-col min-w-0 h-screen overflow-hidden bg-transparent relative z-10">
+        {/* Top Header with Breadcrumbs, DBMS Counter, and the Single Primary Action */}
         <TopHeader
-          selectedRegion="ALL"
-          setSelectedRegion={() => {}}
+          activeTab={activeTab}
           onOpenReportModal={() => setIsReportModalOpen(true)}
           onClearDatabase={handleClearDatabase}
           dbRecordCount={problems.length}
@@ -114,8 +117,19 @@ export const PolicymakerDashboard: React.FC = () => {
         {/* Workspace Display */}
         <div className="flex-1 overflow-hidden p-3 md:p-4 min-h-0">
           {activeTab === "ai-projects" ? (
-            <div className="h-full max-w-4xl mx-auto">
+            <div className="h-full max-w-5xl mx-auto rounded-2xl border border-border overflow-hidden bg-surface-card/90 backdrop-blur-md shadow-lg">
               <AIPriorityProjects externalProjects={aiProjects} />
+            </div>
+          ) : activeTab === "matrix" ? (
+            <div className="h-full max-w-6xl mx-auto rounded-2xl border border-border overflow-hidden bg-surface-card/90 backdrop-blur-md shadow-lg">
+              <InfrastructureHealthMatrix
+                problems={problems}
+                selectedCategory={selectedCategory}
+                onSelectCategory={(cat) => {
+                  setSelectedCategory(cat);
+                  setActiveTab("dashboard");
+                }}
+              />
             </div>
           ) : (
             <ProblemsDirectory

@@ -204,6 +204,12 @@ async def generate_hotspots(
                 f"ML-calculated Severity: {avg_urgency:.1f}/100",
                 f"Primary category: {cluster_category}",
             ],
+            "coBenefits": [
+                f"Directly mitigates infrastructure disruption across {region_name}",
+                f"Provides rapid stabilization for {total_complaints * 500} impacted citizens",
+                f"Aligns with multilateral BRICS Digital Public Good standards",
+                f"Priority resource dispatch via {cluster_category} emergency facility",
+            ],
             "hotspotId": cluster_id,
         }
         ai_projects.append(project_item)

@@ -5,9 +5,9 @@
 :root {
   --background: #090909;
   --surface: #111111;
-  --surface-card: #161616;
-  --surface-card-hover: #1f1f1f;
-  --border: #282828;
+  --surface-card: #151515;
+  --surface-card-hover: #1c1c1c;
+  --border: #262626;
   --border-glow: #39FF14;
   --accent: #39FF14;
   --accent-bright: #a3ff00;
@@ -22,84 +22,128 @@
 body {
   background-color: var(--background);
   color: var(--text-main);
-  background-image: radial-gradient(#222222 1px, transparent 1px);
-  background-size: 20px 20px;
-  background-position: 0 0;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(57, 255, 20, 0.04) 0%, transparent 60%),
+    radial-gradient(#1e1e1e 1px, transparent 1px);
+  background-size: 100% 100%, 24px 24px;
+  background-position: 0 0, 0 0;
   min-height: 100vh;
   overflow-x: hidden;
   font-family: var(--font-inter), 'Inter', sans-serif;
 }
 
-/* Neon Text Glow & Shadows */
-.text-glow-green {
-  text-shadow: 0 0 10px rgba(57, 255, 20, 0.6), 0 0 20px rgba(57, 255, 20, 0.3);
+/* Scroll reveal & Entrance Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.text-glow-white {
-  text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.box-glow-green {
-  box-shadow: 0 0 15px -3px rgba(57, 255, 20, 0.3);
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px -3px rgba(57, 255, 20, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px 0px rgba(57, 255, 20, 0.55);
+  }
 }
 
-/* Ghost / Terminal Outline Buttons */
-.btn-terminal {
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text-muted);
-  font-family: var(--font-jetbrains-mono), monospace;
-  transition: all 0.2s ease;
+.animate-glow-pulse {
+  animation: pulseGlow 3s ease-in-out infinite;
 }
 
-.btn-terminal:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  box-shadow: 0 0 10px -2px rgba(57, 255, 20, 0.4);
+@keyframes radarSweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.btn-terminal-accent {
-  background: transparent;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  font-family: var(--font-jetbrains-mono), monospace;
-  box-shadow: 0 0 8px -2px rgba(57, 255, 20, 0.3);
-  transition: all 0.2s ease;
+.animate-radar {
+  animation: radarSweep 4s linear infinite;
 }
 
-.btn-terminal-accent:hover {
-  background: rgba(57, 255, 20, 0.1);
-  box-shadow: 0 0 15px 0px rgba(57, 255, 20, 0.5);
+/* Audio wave animation */
+@keyframes waveBar {
+  0%, 100% {
+    height: 4px;
+  }
+  50% {
+    height: 22px;
+  }
 }
 
-/* Terminal Card Style */
-.card-terminal {
-  background-color: var(--surface-card);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+.animate-wave-1 { animation: waveBar 0.8s ease-in-out infinite; }
+.animate-wave-2 { animation: waveBar 0.8s ease-in-out 0.2s infinite; }
+.animate-wave-3 { animation: waveBar 0.8s ease-in-out 0.4s infinite; }
+.animate-wave-4 { animation: waveBar 0.8s ease-in-out 0.1s infinite; }
+.animate-wave-5 { animation: waveBar 0.8s ease-in-out 0.3s infinite; }
+
+/* Ticker Marquee */
+@keyframes marqueeAnim {
+  0% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
-.card-terminal:hover {
-  border-color: #383838;
+.animate-marquee {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marqueeAnim 30s linear infinite;
 }
 
-/* Custom Monospace Scrollbars */
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Interactive Cyber Hackathon Card */
+.cyber-card {
+  background: linear-gradient(135deg, rgba(22, 22, 22, 0.8) 0%, rgba(14, 14, 14, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cyber-card:hover {
+  border-color: rgba(57, 255, 20, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px -3px rgba(57, 255, 20, 0.25);
+}
+
+/* Neon Glow Accents */
+.text-glow-accent {
+  text-shadow: 0 0 12px rgba(57, 255, 20, 0.6);
+}
+
+/* Custom Scrollbars */
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0d0d0d;
+  background: #0a0a0a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #282828;
-  border-radius: 3px;
+  background: #262626;
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent);
+  background: #39FF14;
 }
-

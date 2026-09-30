@@ -1,82 +1,14 @@
 [
   {
-    "id": "e73601a4-c865-49dd-b758-df5900693f1b",
-    "timestamp": "2026-09-29T12:13:45.478232+00:00",
-    "channel": "telegram",
-    "original_language": "pt",
-    "original_text": "Alagamento na Marginal Tietê após chuva forte impede a circulação do transporte coletivo.",
-    "english_translation": "Flooding on Marginal Tietê after heavy rainfall is completely blocking public transit flow.",
-    "category": "Transport & Logistics",
-    "latitude": -23.531048,
-    "longitude": -46.626147,
-    "country": "Brazil",
-    "region": "São Paulo Metropolitan Area",
-    "raw_metadata": {
-      "source_city": "São Paulo",
-      "seed_cluster": "cluster_sp_transport"
-    }
-  },
-  {
-    "id": "c506e37d-5e0d-45c4-90bd-faacec20ecee",
-    "timestamp": "2026-09-29T10:06:45.478232+00:00",
-    "channel": "telegram",
-    "original_language": "pt",
-    "original_text": "Alagamento na Marginal Tietê após chuva forte impede a circulação do transporte coletivo.",
-    "english_translation": "Flooding on Marginal Tietê after heavy rainfall is completely blocking public transit flow.",
-    "category": "Transport & Logistics",
-    "latitude": -23.529126,
-    "longitude": -46.61727,
-    "country": "Brazil",
-    "region": "São Paulo Metropolitan Area",
-    "raw_metadata": {
-      "source_city": "São Paulo",
-      "seed_cluster": "cluster_sp_transport"
-    }
-  },
-  {
-    "id": "27ae2448-16bc-4137-899e-c0c6ddcee491",
-    "timestamp": "2026-09-29T12:01:45.478232+00:00",
-    "channel": "whatsapp",
-    "original_language": "pt",
-    "original_text": "Os ônibus da linha 875C estão demorando mais de 50 minutos no corredor da Rebouças.",
-    "english_translation": "Bus line 875C buses are delayed over 50 minutes on the Rebouças transit corridor.",
-    "category": "Transport & Logistics",
-    "latitude": -23.569777,
-    "longitude": -46.632639,
-    "country": "Brazil",
-    "region": "São Paulo Metropolitan Area",
-    "raw_metadata": {
-      "source_city": "São Paulo",
-      "seed_cluster": "cluster_sp_transport"
-    }
-  },
-  {
-    "id": "4ab67e77-1cb0-4c9c-a235-0fb22382753f",
-    "timestamp": "2026-09-29T07:22:45.478232+00:00",
-    "channel": "telegram",
-    "original_language": "pt",
-    "original_text": "Alagamento na Marginal Tietê após chuva forte impede a circulação do transporte coletivo.",
-    "english_translation": "Flooding on Marginal Tietê after heavy rainfall is completely blocking public transit flow.",
-    "category": "Transport & Logistics",
-    "latitude": -23.531971,
-    "longitude": -46.637816,
-    "country": "Brazil",
-    "region": "São Paulo Metropolitan Area",
-    "raw_metadata": {
-      "source_city": "São Paulo",
-      "seed_cluster": "cluster_sp_transport"
-    }
-  },
-  {
-    "id": "d6ec1b03-6394-49aa-bacc-039c7e7f8fab",
-    "timestamp": "2026-09-29T08:24:45.478232+00:00",
+    "id": "0e50b4fd-b2eb-4860-a52f-2e1169e6da26",
+    "timestamp": "2026-09-30T10:30:23.331521+00:00",
     "channel": "telegram",
     "original_language": "pt",
     "original_text": "Buraco de grande porte na pista direita da Av. 23 de Maio furando pneus e causando acidentes.",
     "english_translation": "Large pothole on the right lane of Av. 23 de Maio causing severe tire blowouts and traffic hazard.",
     "category": "Transport & Logistics",
-    "latitude": -23.529343,
-    "longitude": -46.616214,
+    "latitude": -23.558325,
+    "longitude": -46.636675,
     "country": "Brazil",
     "region": "São Paulo Metropolitan Area",
     "raw_metadata": {
@@ -85,15 +17,32 @@
     }
   },
   {
-    "id": "e04ac30f-861b-4179-acfd-d0122b8a356a",
-    "timestamp": "2026-09-29T09:01:45.478232+00:00",
+    "id": "d47a7add-d252-4075-b8c2-013aacd2f3c4",
+    "timestamp": "2026-09-30T13:28:23.331521+00:00",
+    "channel": "web",
+    "original_language": "pt",
+    "original_text": "Bueiros entupidos na Rua da Consolação estão provocando enxurrada e invadindo a calçada.",
+    "english_translation": "Clogged storm drains on Rua da Consolação causing street runoff overflow into pedestrian walkways.",
+    "category": "Transport & Logistics",
+    "latitude": -23.564326,
+    "longitude": -46.653551,
+    "country": "Brazil",
+    "region": "São Paulo Metropolitan Area",
+    "raw_metadata": {
+      "source_city": "São Paulo",
+      "seed_cluster": "cluster_sp_transport"
+    }
+  },
+  {
+    "id": "1446795b-a62f-4b04-a4bb-9f9558b622b1",
+    "timestamp": "2026-09-30T13:44:23.331521+00:00",
     "channel": "whatsapp",
     "original_language": "pt",
     "original_text": "A estação de transferência de ônibus em Pinheiros está sem sinalização digital e com superlotação extrema.",
     "english_translation": "Pinheiros bus terminal is experiencing severe overcrowding and digital schedule board failure.",
     "category": "Transport & Logistics",
-    "latitude": -23.549383,
-    "longitude": -46.615451,
+    "latitude": -23.55139,
+    "longitude": -46.615925,
     "country": "Brazil",
     "region": "São Paulo Metropolitan Area",
     "raw_metadata": {
@@ -102,32 +51,15 @@
     }
   },
   {
-    "id": "cf0bfa39-35d4-441e-8916-411d352b79a6",
-    "timestamp": "2026-09-29T09:32:45.478232+00:00",
-    "channel": "web",
-    "original_language": "pt",
-    "original_text": "Bueiros entupidos na Rua da Consolação estão provocando enxurrada e invadindo a calçada.",
-    "english_translation": "Clogged storm drains on Rua da Consolação causing street runoff overflow into pedestrian walkways.",
-    "category": "Transport & Logistics",
-    "latitude": -23.531298,
-    "longitude": -46.636015,
-    "country": "Brazil",
-    "region": "São Paulo Metropolitan Area",
-    "raw_metadata": {
-      "source_city": "São Paulo",
-      "seed_cluster": "cluster_sp_transport"
-    }
-  },
-  {
-    "id": "e201795a-7f17-4d1b-ac4b-7c07bb51f82f",
-    "timestamp": "2026-09-29T11:20:45.478232+00:00",
+    "id": "17243822-3d00-4252-9a06-6fcdd22a04e2",
+    "timestamp": "2026-09-30T10:32:23.331521+00:00",
     "channel": "telegram",
     "original_language": "pt",
     "original_text": "Buraco de grande porte na pista direita da Av. 23 de Maio furando pneus e causando acidentes.",
     "english_translation": "Large pothole on the right lane of Av. 23 de Maio causing severe tire blowouts and traffic hazard.",
     "category": "Transport & Logistics",
-    "latitude": -23.568144,
-    "longitude": -46.616595,
+    "latitude": -23.533857,
+    "longitude": -46.658123,
     "country": "Brazil",
     "region": "São Paulo Metropolitan Area",
     "raw_metadata": {
@@ -136,15 +68,32 @@
     }
   },
   {
-    "id": "134bf473-7bb3-410b-86f6-06b93b689a44",
-    "timestamp": "2026-09-29T12:40:45.478232+00:00",
+    "id": "725bc1a5-4ffe-4bee-9083-dd7e413f5c0e",
+    "timestamp": "2026-09-30T12:25:23.331521+00:00",
+    "channel": "web",
+    "original_language": "pt",
+    "original_text": "Bueiros entupidos na Rua da Consolação estão provocando enxurrada e invadindo a calçada.",
+    "english_translation": "Clogged storm drains on Rua da Consolação causing street runoff overflow into pedestrian walkways.",
+    "category": "Transport & Logistics",
+    "latitude": -23.531172,
+    "longitude": -46.616491,
+    "country": "Brazil",
+    "region": "São Paulo Metropolitan Area",
+    "raw_metadata": {
+      "source_city": "São Paulo",
+      "seed_cluster": "cluster_sp_transport"
+    }
+  },
+  {
+    "id": "64fb231e-8722-4568-bfb9-cc54b155807b",
+    "timestamp": "2026-09-30T13:19:23.331521+00:00",
     "channel": "whatsapp",
     "original_language": "pt",
     "original_text": "O semáforo do cruzamento principal da Av. Paulista com Brigadeiro está quebrado há 3 horas.",
     "english_translation": "Traffic lights at the main Paulista and Brigadeiro avenue intersection broken for 3 hours, causing gridlock.",
     "category": "Transport & Logistics",
-    "latitude": -23.545812,
-    "longitude": -46.63542,
+    "latitude": -23.569007,
+    "longitude": -46.627955,
     "country": "Brazil",
     "region": "São Paulo Metropolitan Area",
     "raw_metadata": {
@@ -153,15 +102,185 @@
     }
   },
   {
-    "id": "084b551a-ce1e-464d-928f-75984df9adc5",
-    "timestamp": "2026-09-29T08:23:45.478232+00:00",
+    "id": "74b8fb93-1b12-4d84-bbbe-8683f56c966f",
+    "timestamp": "2026-09-30T10:04:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "pt",
+    "original_text": "O semáforo do cruzamento principal da Av. Paulista com Brigadeiro está quebrado há 3 horas.",
+    "english_translation": "Traffic lights at the main Paulista and Brigadeiro avenue intersection broken for 3 hours, causing gridlock.",
+    "category": "Transport & Logistics",
+    "latitude": -23.561415,
+    "longitude": -46.619749,
+    "country": "Brazil",
+    "region": "São Paulo Metropolitan Area",
+    "raw_metadata": {
+      "source_city": "São Paulo",
+      "seed_cluster": "cluster_sp_transport"
+    }
+  },
+  {
+    "id": "13f58e64-a5ed-4fb1-8bc9-fde64202997f",
+    "timestamp": "2026-09-30T11:13:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "pt",
+    "original_text": "O semáforo do cruzamento principal da Av. Paulista com Brigadeiro está quebrado há 3 horas.",
+    "english_translation": "Traffic lights at the main Paulista and Brigadeiro avenue intersection broken for 3 hours, causing gridlock.",
+    "category": "Transport & Logistics",
+    "latitude": -23.539118,
+    "longitude": -46.637708,
+    "country": "Brazil",
+    "region": "São Paulo Metropolitan Area",
+    "raw_metadata": {
+      "source_city": "São Paulo",
+      "seed_cluster": "cluster_sp_transport"
+    }
+  },
+  {
+    "id": "7c253caa-e727-4164-a613-028e62cda572",
+    "timestamp": "2026-09-30T11:35:23.331521+00:00",
+    "channel": "web",
+    "original_language": "pt",
+    "original_text": "Bueiros entupidos na Rua da Consolação estão provocando enxurrada e invadindo a calçada.",
+    "english_translation": "Clogged storm drains on Rua da Consolação causing street runoff overflow into pedestrian walkways.",
+    "category": "Transport & Logistics",
+    "latitude": -23.554259,
+    "longitude": -46.613537,
+    "country": "Brazil",
+    "region": "São Paulo Metropolitan Area",
+    "raw_metadata": {
+      "source_city": "São Paulo",
+      "seed_cluster": "cluster_sp_transport"
+    }
+  },
+  {
+    "id": "50d98335-e063-432e-9767-dca84091b2d3",
+    "timestamp": "2026-09-30T10:54:23.331521+00:00",
+    "channel": "telegram",
+    "original_language": "pt",
+    "original_text": "Buraco de grande porte na pista direita da Av. 23 de Maio furando pneus e causando acidentes.",
+    "english_translation": "Large pothole on the right lane of Av. 23 de Maio causing severe tire blowouts and traffic hazard.",
+    "category": "Transport & Logistics",
+    "latitude": -23.546932,
+    "longitude": -46.642351,
+    "country": "Brazil",
+    "region": "São Paulo Metropolitan Area",
+    "raw_metadata": {
+      "source_city": "São Paulo",
+      "seed_cluster": "cluster_sp_transport"
+    }
+  },
+  {
+    "id": "65573faf-cf74-414f-b3b1-666ddaa488b4",
+    "timestamp": "2026-09-30T11:15:23.331521+00:00",
+    "channel": "web",
+    "original_language": "pt",
+    "original_text": "Bueiros entupidos na Rua da Consolação estão provocando enxurrada e invadindo a calçada.",
+    "english_translation": "Clogged storm drains on Rua da Consolação causing street runoff overflow into pedestrian walkways.",
+    "category": "Transport & Logistics",
+    "latitude": -23.534799,
+    "longitude": -46.640975,
+    "country": "Brazil",
+    "region": "São Paulo Metropolitan Area",
+    "raw_metadata": {
+      "source_city": "São Paulo",
+      "seed_cluster": "cluster_sp_transport"
+    }
+  },
+  {
+    "id": "d60e52d9-eabd-4d74-bc78-af74cf4288b0",
+    "timestamp": "2026-09-30T13:54:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "pt",
+    "original_text": "A estação de transferência de ônibus em Pinheiros está sem sinalização digital e com superlotação extrema.",
+    "english_translation": "Pinheiros bus terminal is experiencing severe overcrowding and digital schedule board failure.",
+    "category": "Transport & Logistics",
+    "latitude": -23.543286,
+    "longitude": -46.656997,
+    "country": "Brazil",
+    "region": "São Paulo Metropolitan Area",
+    "raw_metadata": {
+      "source_city": "São Paulo",
+      "seed_cluster": "cluster_sp_transport"
+    }
+  },
+  {
+    "id": "01e0ff05-3776-4b75-aed0-6f205647b6e2",
+    "timestamp": "2026-09-30T11:42:23.331521+00:00",
+    "channel": "telegram",
+    "original_language": "pt",
+    "original_text": "Buraco de grande porte na pista direita da Av. 23 de Maio furando pneus e causando acidentes.",
+    "english_translation": "Large pothole on the right lane of Av. 23 de Maio causing severe tire blowouts and traffic hazard.",
+    "category": "Transport & Logistics",
+    "latitude": -23.550709,
+    "longitude": -46.613895,
+    "country": "Brazil",
+    "region": "São Paulo Metropolitan Area",
+    "raw_metadata": {
+      "source_city": "São Paulo",
+      "seed_cluster": "cluster_sp_transport"
+    }
+  },
+  {
+    "id": "52224ae9-1cca-4515-b3ae-824c02e96e53",
+    "timestamp": "2026-09-30T11:18:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "pt",
+    "original_text": "Os ônibus da linha 875C estão demorando mais de 50 minutos no corredor da Rebouças.",
+    "english_translation": "Bus line 875C buses are delayed over 50 minutes on the Rebouças transit corridor.",
+    "category": "Transport & Logistics",
+    "latitude": -23.549946,
+    "longitude": -46.634211,
+    "country": "Brazil",
+    "region": "São Paulo Metropolitan Area",
+    "raw_metadata": {
+      "source_city": "São Paulo",
+      "seed_cluster": "cluster_sp_transport"
+    }
+  },
+  {
+    "id": "eb4d3a7e-04e4-4dcf-8261-39b36d551754",
+    "timestamp": "2026-09-30T12:34:23.331521+00:00",
+    "channel": "web",
+    "original_language": "pt",
+    "original_text": "Bueiros entupidos na Rua da Consolação estão provocando enxurrada e invadindo a calçada.",
+    "english_translation": "Clogged storm drains on Rua da Consolação causing street runoff overflow into pedestrian walkways.",
+    "category": "Transport & Logistics",
+    "latitude": -23.570595,
+    "longitude": -46.622026,
+    "country": "Brazil",
+    "region": "São Paulo Metropolitan Area",
+    "raw_metadata": {
+      "source_city": "São Paulo",
+      "seed_cluster": "cluster_sp_transport"
+    }
+  },
+  {
+    "id": "b1cb7fd4-d2a2-4b56-9760-0bae2941148a",
+    "timestamp": "2026-09-30T11:38:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "pt",
+    "original_text": "A estação de transferência de ônibus em Pinheiros está sem sinalização digital e com superlotação extrema.",
+    "english_translation": "Pinheiros bus terminal is experiencing severe overcrowding and digital schedule board failure.",
+    "category": "Transport & Logistics",
+    "latitude": -23.565282,
+    "longitude": -46.636855,
+    "country": "Brazil",
+    "region": "São Paulo Metropolitan Area",
+    "raw_metadata": {
+      "source_city": "São Paulo",
+      "seed_cluster": "cluster_sp_transport"
+    }
+  },
+  {
+    "id": "442bff1d-f66d-4587-8760-3216619bd420",
+    "timestamp": "2026-09-30T10:17:23.331521+00:00",
     "channel": "telegram",
     "original_language": "pt",
     "original_text": "Alagamento na Marginal Tietê após chuva forte impede a circulação do transporte coletivo.",
     "english_translation": "Flooding on Marginal Tietê after heavy rainfall is completely blocking public transit flow.",
     "category": "Transport & Logistics",
-    "latitude": -23.560013,
-    "longitude": -46.645551,
+    "latitude": -23.561484,
+    "longitude": -46.657746,
     "country": "Brazil",
     "region": "São Paulo Metropolitan Area",
     "raw_metadata": {
@@ -170,32 +289,15 @@
     }
   },
   {
-    "id": "d969f594-8050-4ddd-ba07-357bde98be3e",
-    "timestamp": "2026-09-29T08:56:45.478232+00:00",
-    "channel": "web",
-    "original_language": "pt",
-    "original_text": "Bueiros entupidos na Rua da Consolação estão provocando enxurrada e invadindo a calçada.",
-    "english_translation": "Clogged storm drains on Rua da Consolação causing street runoff overflow into pedestrian walkways.",
-    "category": "Transport & Logistics",
-    "latitude": -23.539367,
-    "longitude": -46.624034,
-    "country": "Brazil",
-    "region": "São Paulo Metropolitan Area",
-    "raw_metadata": {
-      "source_city": "São Paulo",
-      "seed_cluster": "cluster_sp_transport"
-    }
-  },
-  {
-    "id": "9a64db5d-104f-4962-8522-c7271e0a1625",
-    "timestamp": "2026-09-29T10:34:45.478232+00:00",
+    "id": "848cb96c-428a-4813-b8a1-721bd595fcad",
+    "timestamp": "2026-09-30T09:19:23.331521+00:00",
     "channel": "telegram",
     "original_language": "pt",
-    "original_text": "Buraco de grande porte na pista direita da Av. 23 de Maio furando pneus e causando acidentes.",
-    "english_translation": "Large pothole on the right lane of Av. 23 de Maio causing severe tire blowouts and traffic hazard.",
+    "original_text": "Alagamento na Marginal Tietê após chuva forte impede a circulação do transporte coletivo.",
+    "english_translation": "Flooding on Marginal Tietê after heavy rainfall is completely blocking public transit flow.",
     "category": "Transport & Logistics",
-    "latitude": -23.543656,
-    "longitude": -46.631614,
+    "latitude": -23.574954,
+    "longitude": -46.611842,
     "country": "Brazil",
     "region": "São Paulo Metropolitan Area",
     "raw_metadata": {
@@ -204,151 +306,15 @@
     }
   },
   {
-    "id": "bc8d53ba-c045-4e25-adb4-f08f390254fb",
-    "timestamp": "2026-09-29T10:12:45.478232+00:00",
-    "channel": "web",
-    "original_language": "pt",
-    "original_text": "Bueiros entupidos na Rua da Consolação estão provocando enxurrada e invadindo a calçada.",
-    "english_translation": "Clogged storm drains on Rua da Consolação causing street runoff overflow into pedestrian walkways.",
-    "category": "Transport & Logistics",
-    "latitude": -23.566494,
-    "longitude": -46.643937,
-    "country": "Brazil",
-    "region": "São Paulo Metropolitan Area",
-    "raw_metadata": {
-      "source_city": "São Paulo",
-      "seed_cluster": "cluster_sp_transport"
-    }
-  },
-  {
-    "id": "0eb4396d-5531-494a-89b1-7c150f54109c",
-    "timestamp": "2026-09-29T08:42:45.478232+00:00",
-    "channel": "web",
-    "original_language": "pt",
-    "original_text": "Bueiros entupidos na Rua da Consolação estão provocando enxurrada e invadindo a calçada.",
-    "english_translation": "Clogged storm drains on Rua da Consolação causing street runoff overflow into pedestrian walkways.",
-    "category": "Transport & Logistics",
-    "latitude": -23.529507,
-    "longitude": -46.631479,
-    "country": "Brazil",
-    "region": "São Paulo Metropolitan Area",
-    "raw_metadata": {
-      "source_city": "São Paulo",
-      "seed_cluster": "cluster_sp_transport"
-    }
-  },
-  {
-    "id": "b120ac32-0517-4da4-907d-dc3fc2fc79b6",
-    "timestamp": "2026-09-29T10:50:45.478232+00:00",
-    "channel": "web",
-    "original_language": "pt",
-    "original_text": "Bueiros entupidos na Rua da Consolação estão provocando enxurrada e invadindo a calçada.",
-    "english_translation": "Clogged storm drains on Rua da Consolação causing street runoff overflow into pedestrian walkways.",
-    "category": "Transport & Logistics",
-    "latitude": -23.571951,
-    "longitude": -46.638749,
-    "country": "Brazil",
-    "region": "São Paulo Metropolitan Area",
-    "raw_metadata": {
-      "source_city": "São Paulo",
-      "seed_cluster": "cluster_sp_transport"
-    }
-  },
-  {
-    "id": "beabbb43-9490-4efb-914c-fae64a4bf769",
-    "timestamp": "2026-09-29T09:26:45.478232+00:00",
-    "channel": "telegram",
-    "original_language": "pt",
-    "original_text": "Buraco de grande porte na pista direita da Av. 23 de Maio furando pneus e causando acidentes.",
-    "english_translation": "Large pothole on the right lane of Av. 23 de Maio causing severe tire blowouts and traffic hazard.",
-    "category": "Transport & Logistics",
-    "latitude": -23.548199,
-    "longitude": -46.610325,
-    "country": "Brazil",
-    "region": "São Paulo Metropolitan Area",
-    "raw_metadata": {
-      "source_city": "São Paulo",
-      "seed_cluster": "cluster_sp_transport"
-    }
-  },
-  {
-    "id": "2bc07f7b-0293-4c99-b146-f169b19ff650",
-    "timestamp": "2026-09-29T09:23:45.478232+00:00",
-    "channel": "telegram",
-    "original_language": "pt",
-    "original_text": "Buraco de grande porte na pista direita da Av. 23 de Maio furando pneus e causando acidentes.",
-    "english_translation": "Large pothole on the right lane of Av. 23 de Maio causing severe tire blowouts and traffic hazard.",
-    "category": "Transport & Logistics",
-    "latitude": -23.565485,
-    "longitude": -46.635027,
-    "country": "Brazil",
-    "region": "São Paulo Metropolitan Area",
-    "raw_metadata": {
-      "source_city": "São Paulo",
-      "seed_cluster": "cluster_sp_transport"
-    }
-  },
-  {
-    "id": "12fbb02b-770d-46f3-b6ee-411f5a333ada",
-    "timestamp": "2026-09-29T09:10:45.478232+00:00",
-    "channel": "telegram",
-    "original_language": "pt",
-    "original_text": "Buraco de grande porte na pista direita da Av. 23 de Maio furando pneus e causando acidentes.",
-    "english_translation": "Large pothole on the right lane of Av. 23 de Maio causing severe tire blowouts and traffic hazard.",
-    "category": "Transport & Logistics",
-    "latitude": -23.558424,
-    "longitude": -46.653205,
-    "country": "Brazil",
-    "region": "São Paulo Metropolitan Area",
-    "raw_metadata": {
-      "source_city": "São Paulo",
-      "seed_cluster": "cluster_sp_transport"
-    }
-  },
-  {
-    "id": "3d6284a1-46a5-4d80-b661-34c413caf76a",
-    "timestamp": "2026-09-29T10:34:45.478232+00:00",
-    "channel": "sms",
-    "original_language": "hi",
-    "original_text": "भूजल स्तर में भारी गिरावट आई है, बोरवेल पूरी तरह सूख चुके हैं।",
-    "english_translation": "Sharp drop in groundwater level; community borewells have completely dried up.",
-    "category": "Water & Sanitation",
-    "latitude": 28.630158,
-    "longitude": 77.206858,
-    "country": "India",
-    "region": "National Capital Region (NCR)",
-    "raw_metadata": {
-      "source_city": "New Delhi",
-      "seed_cluster": "cluster_delhi_water"
-    }
-  },
-  {
-    "id": "1b9cd580-797b-4ea2-b043-0d88eb25428b",
-    "timestamp": "2026-09-29T11:54:45.478232+00:00",
-    "channel": "telegram",
-    "original_language": "hi",
-    "original_text": "द्वारका मोड़ के पास मुख्य जल आपूर्ति वॉल्व लीक हो रहा है और लाखों लीटर पानी बर्बाद हो रहा है।",
-    "english_translation": "Main water valve leaking near Dwarka Mor, wasting millions of liters of treated water.",
-    "category": "Water & Sanitation",
-    "latitude": 28.596027,
-    "longitude": 77.22715,
-    "country": "India",
-    "region": "National Capital Region (NCR)",
-    "raw_metadata": {
-      "source_city": "New Delhi",
-      "seed_cluster": "cluster_delhi_water"
-    }
-  },
-  {
-    "id": "c555dfba-6edc-4d8d-9964-2d46de0d83c8",
-    "timestamp": "2026-09-29T13:09:45.478232+00:00",
+    "id": "68e92fa2-fcab-4af9-b978-0ac633e76c74",
+    "timestamp": "2026-09-30T13:42:23.331521+00:00",
     "channel": "twilio_voice",
     "original_language": "hi",
     "original_text": "गंदे और बदबूदार पानी की आपूर्ति हो रही है, जिससे बच्चों में पेट की बीमारियां फैल रही हैं।",
     "english_translation": "Contaminated and foul-smelling tap water being supplied, causing stomach illnesses in children.",
     "category": "Water & Sanitation",
-    "latitude": 28.602107,
-    "longitude": 77.187365,
+    "latitude": 28.610211,
+    "longitude": 77.192767,
     "country": "India",
     "region": "National Capital Region (NCR)",
     "raw_metadata": {
@@ -357,134 +323,15 @@
     }
   },
   {
-    "id": "d60c947d-f5ca-4be0-861a-25d496c5e31b",
-    "timestamp": "2026-09-29T10:01:45.478232+00:00",
-    "channel": "telegram",
-    "original_language": "hi",
-    "original_text": "द्वारका मोड़ के पास मुख्य जल आपूर्ति वॉल्व लीक हो रहा है और लाखों लीटर पानी बर्बाद हो रहा है।",
-    "english_translation": "Main water valve leaking near Dwarka Mor, wasting millions of liters of treated water.",
-    "category": "Water & Sanitation",
-    "latitude": 28.59297,
-    "longitude": 77.217108,
-    "country": "India",
-    "region": "National Capital Region (NCR)",
-    "raw_metadata": {
-      "source_city": "New Delhi",
-      "seed_cluster": "cluster_delhi_water"
-    }
-  },
-  {
-    "id": "5650b0f7-130b-4f77-bda9-df502681f066",
-    "timestamp": "2026-09-29T09:13:45.478232+00:00",
-    "channel": "whatsapp",
-    "original_language": "hi",
-    "original_text": "सीवर लाइन ओवरफ्लो होकर पीने के पानी के स्रोत में मिल रही है, तत्काल मरम्मत की आवश्यकता है।",
-    "english_translation": "Sewage line overflow contaminating nearby potable water junction; urgent repair needed.",
-    "category": "Water & Sanitation",
-    "latitude": 28.624115,
-    "longitude": 77.213485,
-    "country": "India",
-    "region": "National Capital Region (NCR)",
-    "raw_metadata": {
-      "source_city": "New Delhi",
-      "seed_cluster": "cluster_delhi_water"
-    }
-  },
-  {
-    "id": "2ffb0035-4ef7-48eb-9c01-2b8d0f6145b6",
-    "timestamp": "2026-09-29T08:59:45.478232+00:00",
-    "channel": "telegram",
-    "original_language": "hi",
-    "original_text": "द्वारका मोड़ के पास मुख्य जल आपूर्ति वॉल्व लीक हो रहा है और लाखों लीटर पानी बर्बाद हो रहा है।",
-    "english_translation": "Main water valve leaking near Dwarka Mor, wasting millions of liters of treated water.",
-    "category": "Water & Sanitation",
-    "latitude": 28.609896,
-    "longitude": 77.215974,
-    "country": "India",
-    "region": "National Capital Region (NCR)",
-    "raw_metadata": {
-      "source_city": "New Delhi",
-      "seed_cluster": "cluster_delhi_water"
-    }
-  },
-  {
-    "id": "b3aa3b4d-7999-49a0-96db-b545089503c8",
-    "timestamp": "2026-09-29T09:20:45.478232+00:00",
-    "channel": "telegram",
-    "original_language": "hi",
-    "original_text": "द्वारका मोड़ के पास मुख्य जल आपूर्ति वॉल्व लीक हो रहा है और लाखों लीटर पानी बर्बाद हो रहा है।",
-    "english_translation": "Main water valve leaking near Dwarka Mor, wasting millions of liters of treated water.",
-    "category": "Water & Sanitation",
-    "latitude": 28.595465,
-    "longitude": 77.22102,
-    "country": "India",
-    "region": "National Capital Region (NCR)",
-    "raw_metadata": {
-      "source_city": "New Delhi",
-      "seed_cluster": "cluster_delhi_water"
-    }
-  },
-  {
-    "id": "fa85d380-2a15-4e9e-a79a-fc18c05fb148",
-    "timestamp": "2026-09-29T12:52:45.478232+00:00",
-    "channel": "whatsapp",
-    "original_language": "hi",
-    "original_text": "सीवर लाइन ओवरफ्लो होकर पीने के पानी के स्रोत में मिल रही है, तत्काल मरम्मत की आवश्यकता है।",
-    "english_translation": "Sewage line overflow contaminating nearby potable water junction; urgent repair needed.",
-    "category": "Water & Sanitation",
-    "latitude": 28.606584,
-    "longitude": 77.184916,
-    "country": "India",
-    "region": "National Capital Region (NCR)",
-    "raw_metadata": {
-      "source_city": "New Delhi",
-      "seed_cluster": "cluster_delhi_water"
-    }
-  },
-  {
-    "id": "2d21f1f3-e7cd-4167-adb9-832d0e7c5aea",
-    "timestamp": "2026-09-29T08:34:45.478232+00:00",
-    "channel": "whatsapp",
-    "original_language": "hi",
-    "original_text": "हमारे इलाके में पिछले 48 घंटों से मुख्य पाइपलाइन फटने के कारण पीने का पानी पूरी तरह बंद है।",
-    "english_translation": "Potable water supply completely shut down for 48 hours due to a primary feeder pipeline rupture.",
-    "category": "Water & Sanitation",
-    "latitude": 28.626281,
-    "longitude": 77.211538,
-    "country": "India",
-    "region": "National Capital Region (NCR)",
-    "raw_metadata": {
-      "source_city": "New Delhi",
-      "seed_cluster": "cluster_delhi_water"
-    }
-  },
-  {
-    "id": "e3b42c08-ce95-45ff-98f5-d2e92d0333ab",
-    "timestamp": "2026-09-29T13:02:45.478232+00:00",
-    "channel": "whatsapp",
-    "original_language": "hi",
-    "original_text": "सीवर लाइन ओवरफ्लो होकर पीने के पानी के स्रोत में मिल रही है, तत्काल मरम्मत की आवश्यकता है।",
-    "english_translation": "Sewage line overflow contaminating nearby potable water junction; urgent repair needed.",
-    "category": "Water & Sanitation",
-    "latitude": 28.638789,
-    "longitude": 77.20592,
-    "country": "India",
-    "region": "National Capital Region (NCR)",
-    "raw_metadata": {
-      "source_city": "New Delhi",
-      "seed_cluster": "cluster_delhi_water"
-    }
-  },
-  {
-    "id": "4a7d7f0d-939a-4291-927e-bd116834577b",
-    "timestamp": "2026-09-29T10:26:45.478232+00:00",
+    "id": "fc2d5178-9f64-4ed8-bb95-00e371425eeb",
+    "timestamp": "2026-09-30T12:24:23.331521+00:00",
     "channel": "whatsapp",
     "original_language": "hi",
     "original_text": "पानी का सरकारी टैंकर पिछले तीन दिनों से रोहिणी सेक्टर 16 में नहीं आया है।",
     "english_translation": "Municipal emergency water tanker has not arrived in Rohini Sector 16 for three days.",
     "category": "Water & Sanitation",
-    "latitude": 28.590103,
-    "longitude": 77.190105,
+    "latitude": 28.594226,
+    "longitude": 77.19924,
     "country": "India",
     "region": "National Capital Region (NCR)",
     "raw_metadata": {
@@ -493,100 +340,15 @@
     }
   },
   {
-    "id": "26101c7b-8a9c-4cbe-a577-f05444bd3c55",
-    "timestamp": "2026-09-29T11:39:45.478232+00:00",
-    "channel": "whatsapp",
-    "original_language": "hi",
-    "original_text": "सीवर लाइन ओवरफ्लो होकर पीने के पानी के स्रोत में मिल रही है, तत्काल मरम्मत की आवश्यकता है।",
-    "english_translation": "Sewage line overflow contaminating nearby potable water junction; urgent repair needed.",
-    "category": "Water & Sanitation",
-    "latitude": 28.61241,
-    "longitude": 77.218555,
-    "country": "India",
-    "region": "National Capital Region (NCR)",
-    "raw_metadata": {
-      "source_city": "New Delhi",
-      "seed_cluster": "cluster_delhi_water"
-    }
-  },
-  {
-    "id": "c2b4ddbc-0551-4e3f-a83f-0fea503d37d1",
-    "timestamp": "2026-09-29T09:20:45.478232+00:00",
-    "channel": "whatsapp",
-    "original_language": "hi",
-    "original_text": "हमारे इलाके में पिछले 48 घंटों से मुख्य पाइपलाइन फटने के कारण पीने का पानी पूरी तरह बंद है।",
-    "english_translation": "Potable water supply completely shut down for 48 hours due to a primary feeder pipeline rupture.",
-    "category": "Water & Sanitation",
-    "latitude": 28.612664,
-    "longitude": 77.218727,
-    "country": "India",
-    "region": "National Capital Region (NCR)",
-    "raw_metadata": {
-      "source_city": "New Delhi",
-      "seed_cluster": "cluster_delhi_water"
-    }
-  },
-  {
-    "id": "e8b96fcb-e4d8-41d2-9398-9759ea5f8dd6",
-    "timestamp": "2026-09-29T09:51:45.478232+00:00",
-    "channel": "whatsapp",
-    "original_language": "hi",
-    "original_text": "सीवर लाइन ओवरफ्लो होकर पीने के पानी के स्रोत में मिल रही है, तत्काल मरम्मत की आवश्यकता है।",
-    "english_translation": "Sewage line overflow contaminating nearby potable water junction; urgent repair needed.",
-    "category": "Water & Sanitation",
-    "latitude": 28.589905,
-    "longitude": 77.218888,
-    "country": "India",
-    "region": "National Capital Region (NCR)",
-    "raw_metadata": {
-      "source_city": "New Delhi",
-      "seed_cluster": "cluster_delhi_water"
-    }
-  },
-  {
-    "id": "8a62406f-3dff-4722-90eb-68921ba15a94",
-    "timestamp": "2026-09-29T11:28:45.478232+00:00",
-    "channel": "whatsapp",
-    "original_language": "hi",
-    "original_text": "सीवर लाइन ओवरफ्लो होकर पीने के पानी के स्रोत में मिल रही है, तत्काल मरम्मत की आवश्यकता है।",
-    "english_translation": "Sewage line overflow contaminating nearby potable water junction; urgent repair needed.",
-    "category": "Water & Sanitation",
-    "latitude": 28.620552,
-    "longitude": 77.227696,
-    "country": "India",
-    "region": "National Capital Region (NCR)",
-    "raw_metadata": {
-      "source_city": "New Delhi",
-      "seed_cluster": "cluster_delhi_water"
-    }
-  },
-  {
-    "id": "a430ff39-0fe2-40b4-b877-ac3ef743f3dd",
-    "timestamp": "2026-09-29T10:52:45.478232+00:00",
-    "channel": "telegram",
-    "original_language": "hi",
-    "original_text": "द्वारका मोड़ के पास मुख्य जल आपूर्ति वॉल्व लीक हो रहा है और लाखों लीटर पानी बर्बाद हो रहा है।",
-    "english_translation": "Main water valve leaking near Dwarka Mor, wasting millions of liters of treated water.",
-    "category": "Water & Sanitation",
-    "latitude": 28.596891,
-    "longitude": 77.19496,
-    "country": "India",
-    "region": "National Capital Region (NCR)",
-    "raw_metadata": {
-      "source_city": "New Delhi",
-      "seed_cluster": "cluster_delhi_water"
-    }
-  },
-  {
-    "id": "635ddf36-9a98-45aa-9925-d62c3b243351",
-    "timestamp": "2026-09-29T11:23:45.478232+00:00",
+    "id": "0003b12d-32d4-4f78-8dca-5fd8525f35f0",
+    "timestamp": "2026-09-30T10:48:23.331521+00:00",
     "channel": "whatsapp",
     "original_language": "hi",
     "original_text": "पानी का सरकारी टैंकर पिछले तीन दिनों से रोहिणी सेक्टर 16 में नहीं आया है।",
     "english_translation": "Municipal emergency water tanker has not arrived in Rohini Sector 16 for three days.",
     "category": "Water & Sanitation",
-    "latitude": 28.594749,
-    "longitude": 77.193512,
+    "latitude": 28.607293,
+    "longitude": 77.186628,
     "country": "India",
     "region": "National Capital Region (NCR)",
     "raw_metadata": {
@@ -595,15 +357,270 @@
     }
   },
   {
-    "id": "5d963770-5c84-412a-a6b8-598f9b282b1b",
-    "timestamp": "2026-09-29T08:38:45.478232+00:00",
+    "id": "4d77a98a-e057-4ae1-ac93-160efdb249f5",
+    "timestamp": "2026-09-30T13:38:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "hi",
+    "original_text": "पानी का सरकारी टैंकर पिछले तीन दिनों से रोहिणी सेक्टर 16 में नहीं आया है।",
+    "english_translation": "Municipal emergency water tanker has not arrived in Rohini Sector 16 for three days.",
+    "category": "Water & Sanitation",
+    "latitude": 28.633731,
+    "longitude": 77.21528,
+    "country": "India",
+    "region": "National Capital Region (NCR)",
+    "raw_metadata": {
+      "source_city": "New Delhi",
+      "seed_cluster": "cluster_delhi_water"
+    }
+  },
+  {
+    "id": "ea83313a-9d9f-44ac-ab5a-6aac9c52c0fb",
+    "timestamp": "2026-09-30T11:19:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "hi",
+    "original_text": "पानी का सरकारी टैंकर पिछले तीन दिनों से रोहिणी सेक्टर 16 में नहीं आया है।",
+    "english_translation": "Municipal emergency water tanker has not arrived in Rohini Sector 16 for three days.",
+    "category": "Water & Sanitation",
+    "latitude": 28.618418,
+    "longitude": 77.206316,
+    "country": "India",
+    "region": "National Capital Region (NCR)",
+    "raw_metadata": {
+      "source_city": "New Delhi",
+      "seed_cluster": "cluster_delhi_water"
+    }
+  },
+  {
+    "id": "f56fb740-2c74-489b-8750-e9252091fe6a",
+    "timestamp": "2026-09-30T10:17:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "hi",
+    "original_text": "हमारे इलाके में पिछले 48 घंटों से मुख्य पाइपलाइन फटने के कारण पीने का पानी पूरी तरह बंद है।",
+    "english_translation": "Potable water supply completely shut down for 48 hours due to a primary feeder pipeline rupture.",
+    "category": "Water & Sanitation",
+    "latitude": 28.596735,
+    "longitude": 77.205619,
+    "country": "India",
+    "region": "National Capital Region (NCR)",
+    "raw_metadata": {
+      "source_city": "New Delhi",
+      "seed_cluster": "cluster_delhi_water"
+    }
+  },
+  {
+    "id": "34694635-4220-4613-8275-e31119c4f6c7",
+    "timestamp": "2026-09-30T13:06:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "hi",
+    "original_text": "हमारे इलाके में पिछले 48 घंटों से मुख्य पाइपलाइन फटने के कारण पीने का पानी पूरी तरह बंद है।",
+    "english_translation": "Potable water supply completely shut down for 48 hours due to a primary feeder pipeline rupture.",
+    "category": "Water & Sanitation",
+    "latitude": 28.593106,
+    "longitude": 77.207576,
+    "country": "India",
+    "region": "National Capital Region (NCR)",
+    "raw_metadata": {
+      "source_city": "New Delhi",
+      "seed_cluster": "cluster_delhi_water"
+    }
+  },
+  {
+    "id": "2a2d4dfd-51ae-4112-bbc2-5b1145eb0524",
+    "timestamp": "2026-09-30T12:38:23.331521+00:00",
+    "channel": "twilio_voice",
+    "original_language": "hi",
+    "original_text": "गंदे और बदबूदार पानी की आपूर्ति हो रही है, जिससे बच्चों में पेट की बीमारियां फैल रही हैं।",
+    "english_translation": "Contaminated and foul-smelling tap water being supplied, causing stomach illnesses in children.",
+    "category": "Water & Sanitation",
+    "latitude": 28.616973,
+    "longitude": 77.206859,
+    "country": "India",
+    "region": "National Capital Region (NCR)",
+    "raw_metadata": {
+      "source_city": "New Delhi",
+      "seed_cluster": "cluster_delhi_water"
+    }
+  },
+  {
+    "id": "df70320d-1e33-4120-977a-473bb45f9df0",
+    "timestamp": "2026-09-30T10:24:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "hi",
+    "original_text": "पानी का सरकारी टैंकर पिछले तीन दिनों से रोहिणी सेक्टर 16 में नहीं आया है।",
+    "english_translation": "Municipal emergency water tanker has not arrived in Rohini Sector 16 for three days.",
+    "category": "Water & Sanitation",
+    "latitude": 28.628139,
+    "longitude": 77.187707,
+    "country": "India",
+    "region": "National Capital Region (NCR)",
+    "raw_metadata": {
+      "source_city": "New Delhi",
+      "seed_cluster": "cluster_delhi_water"
+    }
+  },
+  {
+    "id": "0ecab7fb-425a-4117-b5d1-c458f8ee3019",
+    "timestamp": "2026-09-30T13:04:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "hi",
+    "original_text": "पानी का सरकारी टैंकर पिछले तीन दिनों से रोहिणी सेक्टर 16 में नहीं आया है।",
+    "english_translation": "Municipal emergency water tanker has not arrived in Rohini Sector 16 for three days.",
+    "category": "Water & Sanitation",
+    "latitude": 28.589278,
+    "longitude": 77.231777,
+    "country": "India",
+    "region": "National Capital Region (NCR)",
+    "raw_metadata": {
+      "source_city": "New Delhi",
+      "seed_cluster": "cluster_delhi_water"
+    }
+  },
+  {
+    "id": "a7166b56-3625-49e2-9fa3-25a4e31d2705",
+    "timestamp": "2026-09-30T12:58:23.331521+00:00",
+    "channel": "sms",
+    "original_language": "hi",
+    "original_text": "भूजल स्तर में भारी गिरावट आई है, बोरवेल पूरी तरह सूख चुके हैं।",
+    "english_translation": "Sharp drop in groundwater level; community borewells have completely dried up.",
+    "category": "Water & Sanitation",
+    "latitude": 28.5914,
+    "longitude": 77.209197,
+    "country": "India",
+    "region": "National Capital Region (NCR)",
+    "raw_metadata": {
+      "source_city": "New Delhi",
+      "seed_cluster": "cluster_delhi_water"
+    }
+  },
+  {
+    "id": "5bb118fe-9586-4ab9-95d3-2a05c5835bd6",
+    "timestamp": "2026-09-30T11:28:23.331521+00:00",
+    "channel": "sms",
+    "original_language": "hi",
+    "original_text": "भूजल स्तर में भारी गिरावट आई है, बोरवेल पूरी तरह सूख चुके हैं।",
+    "english_translation": "Sharp drop in groundwater level; community borewells have completely dried up.",
+    "category": "Water & Sanitation",
+    "latitude": 28.596331,
+    "longitude": 77.198543,
+    "country": "India",
+    "region": "National Capital Region (NCR)",
+    "raw_metadata": {
+      "source_city": "New Delhi",
+      "seed_cluster": "cluster_delhi_water"
+    }
+  },
+  {
+    "id": "efebe462-c7a8-468c-ad60-b74ff83c0144",
+    "timestamp": "2026-09-30T13:42:23.331521+00:00",
+    "channel": "twilio_voice",
+    "original_language": "hi",
+    "original_text": "गंदे और बदबूदार पानी की आपूर्ति हो रही है, जिससे बच्चों में पेट की बीमारियां फैल रही हैं।",
+    "english_translation": "Contaminated and foul-smelling tap water being supplied, causing stomach illnesses in children.",
+    "category": "Water & Sanitation",
+    "latitude": 28.628106,
+    "longitude": 77.200304,
+    "country": "India",
+    "region": "National Capital Region (NCR)",
+    "raw_metadata": {
+      "source_city": "New Delhi",
+      "seed_cluster": "cluster_delhi_water"
+    }
+  },
+  {
+    "id": "39304ea8-5e83-4c88-ad80-be4f4c59843c",
+    "timestamp": "2026-09-30T10:07:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "hi",
+    "original_text": "हमारे इलाके में पिछले 48 घंटों से मुख्य पाइपलाइन फटने के कारण पीने का पानी पूरी तरह बंद है।",
+    "english_translation": "Potable water supply completely shut down for 48 hours due to a primary feeder pipeline rupture.",
+    "category": "Water & Sanitation",
+    "latitude": 28.616372,
+    "longitude": 77.202905,
+    "country": "India",
+    "region": "National Capital Region (NCR)",
+    "raw_metadata": {
+      "source_city": "New Delhi",
+      "seed_cluster": "cluster_delhi_water"
+    }
+  },
+  {
+    "id": "5bb8a7a2-4e73-4e5a-9a5a-1dd9694a98b5",
+    "timestamp": "2026-09-30T11:03:23.331521+00:00",
+    "channel": "telegram",
+    "original_language": "hi",
+    "original_text": "द्वारका मोड़ के पास मुख्य जल आपूर्ति वॉल्व लीक हो रहा है और लाखों लीटर पानी बर्बाद हो रहा है।",
+    "english_translation": "Main water valve leaking near Dwarka Mor, wasting millions of liters of treated water.",
+    "category": "Water & Sanitation",
+    "latitude": 28.613411,
+    "longitude": 77.192667,
+    "country": "India",
+    "region": "National Capital Region (NCR)",
+    "raw_metadata": {
+      "source_city": "New Delhi",
+      "seed_cluster": "cluster_delhi_water"
+    }
+  },
+  {
+    "id": "b3909d60-0f90-443d-a7f6-d36b6e5870c5",
+    "timestamp": "2026-09-30T14:19:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "hi",
+    "original_text": "पानी का सरकारी टैंकर पिछले तीन दिनों से रोहिणी सेक्टर 16 में नहीं आया है।",
+    "english_translation": "Municipal emergency water tanker has not arrived in Rohini Sector 16 for three days.",
+    "category": "Water & Sanitation",
+    "latitude": 28.609103,
+    "longitude": 77.194678,
+    "country": "India",
+    "region": "National Capital Region (NCR)",
+    "raw_metadata": {
+      "source_city": "New Delhi",
+      "seed_cluster": "cluster_delhi_water"
+    }
+  },
+  {
+    "id": "28afa032-fd0e-484c-a834-f17708c48f0e",
+    "timestamp": "2026-09-30T12:58:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "hi",
+    "original_text": "पानी का सरकारी टैंकर पिछले तीन दिनों से रोहिणी सेक्टर 16 में नहीं आया है।",
+    "english_translation": "Municipal emergency water tanker has not arrived in Rohini Sector 16 for three days.",
+    "category": "Water & Sanitation",
+    "latitude": 28.633088,
+    "longitude": 77.227614,
+    "country": "India",
+    "region": "National Capital Region (NCR)",
+    "raw_metadata": {
+      "source_city": "New Delhi",
+      "seed_cluster": "cluster_delhi_water"
+    }
+  },
+  {
+    "id": "aaebda71-328f-42a9-8c98-01a969f49605",
+    "timestamp": "2026-09-30T14:24:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "zu",
+    "original_text": "Ukucinywa kukagesi (Load shedding) kudale ukuthi iziqandisi zokugcina imithi zicashe.",
+    "english_translation": "Stage 6 load shedding causing critical vaccine cold-chain refrigeration units to fail.",
+    "category": "Grid & Power",
+    "latitude": -33.904561,
+    "longitude": 18.431601,
+    "country": "South Africa",
+    "region": "Western Cape Peninsula",
+    "raw_metadata": {
+      "source_city": "Cape Town",
+      "seed_cluster": "cluster_ct_power"
+    }
+  },
+  {
+    "id": "eccfc59c-fe7d-45f3-95ea-24207f908596",
+    "timestamp": "2026-09-30T14:23:23.331521+00:00",
     "channel": "twilio_voice",
     "original_language": "zu",
     "original_text": "Ugesi ucimile eKhayelitsha kusukela ekuseni, imtholampilo ayikwazi ukusebenza.",
     "english_translation": "Power outage in Khayelitsha since morning; community clinics unable to operate medical gear.",
     "category": "Grid & Power",
-    "latitude": -33.906655,
-    "longitude": 18.432841,
+    "latitude": -33.932397,
+    "longitude": 18.432325,
     "country": "South Africa",
     "region": "Western Cape Peninsula",
     "raw_metadata": {
@@ -612,219 +629,15 @@
     }
   },
   {
-    "id": "2f085b72-e276-4c0d-8b9e-fca918f2db12",
-    "timestamp": "2026-09-29T11:17:45.478232+00:00",
-    "channel": "twilio_voice",
-    "original_language": "zu",
-    "original_text": "Ugesi ucimile eKhayelitsha kusukela ekuseni, imtholampilo ayikwazi ukusebenza.",
-    "english_translation": "Power outage in Khayelitsha since morning; community clinics unable to operate medical gear.",
-    "category": "Grid & Power",
-    "latitude": -33.916466,
-    "longitude": 18.420296,
-    "country": "South Africa",
-    "region": "Western Cape Peninsula",
-    "raw_metadata": {
-      "source_city": "Cape Town",
-      "seed_cluster": "cluster_ct_power"
-    }
-  },
-  {
-    "id": "a10ba187-b5ad-4743-894e-5653028d502c",
-    "timestamp": "2026-09-29T12:23:45.478232+00:00",
-    "channel": "whatsapp",
-    "original_language": "zu",
-    "original_text": "Ukucinywa kukagesi (Load shedding) kudale ukuthi iziqandisi zokugcina imithi zicashe.",
-    "english_translation": "Stage 6 load shedding causing critical vaccine cold-chain refrigeration units to fail.",
-    "category": "Grid & Power",
-    "latitude": -33.9218,
-    "longitude": 18.420311,
-    "country": "South Africa",
-    "region": "Western Cape Peninsula",
-    "raw_metadata": {
-      "source_city": "Cape Town",
-      "seed_cluster": "cluster_ct_power"
-    }
-  },
-  {
-    "id": "e17b936e-3b88-4536-903d-57b6cfab1f95",
-    "timestamp": "2026-09-29T11:32:45.478232+00:00",
-    "channel": "telegram",
-    "original_language": "zu",
-    "original_text": "I-substation kagesi e-Mitchells Plain idubule izolo ebusuku, indawo yonke isebumnyameni.",
-    "english_translation": "Electrical substation in Mitchells Plain exploded last night, leaving entire area in darkness.",
-    "category": "Grid & Power",
-    "latitude": -33.94203,
-    "longitude": 18.402535,
-    "country": "South Africa",
-    "region": "Western Cape Peninsula",
-    "raw_metadata": {
-      "source_city": "Cape Town",
-      "seed_cluster": "cluster_ct_power"
-    }
-  },
-  {
-    "id": "34dcbd56-7baf-4cbf-9fbe-e27d641c3324",
-    "timestamp": "2026-09-29T08:40:45.478232+00:00",
-    "channel": "twilio_voice",
-    "original_language": "zu",
-    "original_text": "Ugesi ucimile eKhayelitsha kusukela ekuseni, imtholampilo ayikwazi ukusebenza.",
-    "english_translation": "Power outage in Khayelitsha since morning; community clinics unable to operate medical gear.",
-    "category": "Grid & Power",
-    "latitude": -33.948011,
-    "longitude": 18.416289,
-    "country": "South Africa",
-    "region": "Western Cape Peninsula",
-    "raw_metadata": {
-      "source_city": "Cape Town",
-      "seed_cluster": "cluster_ct_power"
-    }
-  },
-  {
-    "id": "c9b73555-5d2f-45eb-be2c-b1033219cc32",
-    "timestamp": "2026-09-29T12:58:45.478232+00:00",
-    "channel": "whatsapp",
-    "original_language": "zu",
-    "original_text": "Ukucinywa kukagesi (Load shedding) kudale ukuthi iziqandisi zokugcina imithi zicashe.",
-    "english_translation": "Stage 6 load shedding causing critical vaccine cold-chain refrigeration units to fail.",
-    "category": "Grid & Power",
-    "latitude": -33.931997,
-    "longitude": 18.417539,
-    "country": "South Africa",
-    "region": "Western Cape Peninsula",
-    "raw_metadata": {
-      "source_city": "Cape Town",
-      "seed_cluster": "cluster_ct_power"
-    }
-  },
-  {
-    "id": "8c5ae19e-e216-4362-8249-e821d8d69821",
-    "timestamp": "2026-09-29T12:12:45.478232+00:00",
-    "channel": "telegram",
-    "original_language": "zu",
-    "original_text": "I-substation kagesi e-Mitchells Plain idubule izolo ebusuku, indawo yonke isebumnyameni.",
-    "english_translation": "Electrical substation in Mitchells Plain exploded last night, leaving entire area in darkness.",
-    "category": "Grid & Power",
-    "latitude": -33.901109,
-    "longitude": 18.437512,
-    "country": "South Africa",
-    "region": "Western Cape Peninsula",
-    "raw_metadata": {
-      "source_city": "Cape Town",
-      "seed_cluster": "cluster_ct_power"
-    }
-  },
-  {
-    "id": "41f1d1d3-9895-417c-8d5f-5e0a8cd01380",
-    "timestamp": "2026-09-29T07:33:45.478232+00:00",
-    "channel": "telegram",
-    "original_language": "zu",
-    "original_text": "I-substation kagesi e-Mitchells Plain idubule izolo ebusuku, indawo yonke isebumnyameni.",
-    "english_translation": "Electrical substation in Mitchells Plain exploded last night, leaving entire area in darkness.",
-    "category": "Grid & Power",
-    "latitude": -33.911614,
-    "longitude": 18.426085,
-    "country": "South Africa",
-    "region": "Western Cape Peninsula",
-    "raw_metadata": {
-      "source_city": "Cape Town",
-      "seed_cluster": "cluster_ct_power"
-    }
-  },
-  {
-    "id": "1983ce97-a83d-4320-a7d3-668232d3e5de",
-    "timestamp": "2026-09-29T07:03:45.478232+00:00",
-    "channel": "whatsapp",
-    "original_language": "zu",
-    "original_text": "Ukucinywa kukagesi (Load shedding) kudale ukuthi iziqandisi zokugcina imithi zicashe.",
-    "english_translation": "Stage 6 load shedding causing critical vaccine cold-chain refrigeration units to fail.",
-    "category": "Grid & Power",
-    "latitude": -33.9179,
-    "longitude": 18.415724,
-    "country": "South Africa",
-    "region": "Western Cape Peninsula",
-    "raw_metadata": {
-      "source_city": "Cape Town",
-      "seed_cluster": "cluster_ct_power"
-    }
-  },
-  {
-    "id": "f9ebff01-cedc-4263-8699-2a41b519b326",
-    "timestamp": "2026-09-29T07:07:45.478232+00:00",
-    "channel": "web",
-    "original_language": "zu",
-    "original_text": "Izikole zendawo azikwazi ukuqhuba amakilasi e-computer ngenxa yokucima kukagesi okungapheli.",
-    "english_translation": "Local schools unable to conduct digital classes due to unannounced rolling power blackouts.",
-    "category": "Grid & Power",
-    "latitude": -33.937856,
-    "longitude": 18.425805,
-    "country": "South Africa",
-    "region": "Western Cape Peninsula",
-    "raw_metadata": {
-      "source_city": "Cape Town",
-      "seed_cluster": "cluster_ct_power"
-    }
-  },
-  {
-    "id": "ede3fd2f-b113-4995-ae81-65291ad04e7e",
-    "timestamp": "2026-09-29T07:26:45.478232+00:00",
-    "channel": "telegram",
-    "original_language": "zu",
-    "original_text": "I-substation kagesi e-Mitchells Plain idubule izolo ebusuku, indawo yonke isebumnyameni.",
-    "english_translation": "Electrical substation in Mitchells Plain exploded last night, leaving entire area in darkness.",
-    "category": "Grid & Power",
-    "latitude": -33.945,
-    "longitude": 18.430289,
-    "country": "South Africa",
-    "region": "Western Cape Peninsula",
-    "raw_metadata": {
-      "source_city": "Cape Town",
-      "seed_cluster": "cluster_ct_power"
-    }
-  },
-  {
-    "id": "72ad8cd6-4174-4c42-8a82-27188b8c9cea",
-    "timestamp": "2026-09-29T06:24:45.478232+00:00",
-    "channel": "whatsapp",
-    "original_language": "zu",
-    "original_text": "Ukucinywa kukagesi (Load shedding) kudale ukuthi iziqandisi zokugcina imithi zicashe.",
-    "english_translation": "Stage 6 load shedding causing critical vaccine cold-chain refrigeration units to fail.",
-    "category": "Grid & Power",
-    "latitude": -33.940546,
-    "longitude": 18.448788,
-    "country": "South Africa",
-    "region": "Western Cape Peninsula",
-    "raw_metadata": {
-      "source_city": "Cape Town",
-      "seed_cluster": "cluster_ct_power"
-    }
-  },
-  {
-    "id": "a77a00dc-553c-464c-9b06-2e5068d93cda",
-    "timestamp": "2026-09-29T06:13:45.478232+00:00",
-    "channel": "telegram",
-    "original_language": "zu",
-    "original_text": "I-substation kagesi e-Mitchells Plain idubule izolo ebusuku, indawo yonke isebumnyameni.",
-    "english_translation": "Electrical substation in Mitchells Plain exploded last night, leaving entire area in darkness.",
-    "category": "Grid & Power",
-    "latitude": -33.906406,
-    "longitude": 18.401224,
-    "country": "South Africa",
-    "region": "Western Cape Peninsula",
-    "raw_metadata": {
-      "source_city": "Cape Town",
-      "seed_cluster": "cluster_ct_power"
-    }
-  },
-  {
-    "id": "545b8eba-40a6-4e10-984c-dabb96cbc3f8",
-    "timestamp": "2026-09-29T10:33:45.478232+00:00",
+    "id": "0514a3c3-865e-4bd6-b98c-8b4ed80e6ffc",
+    "timestamp": "2026-09-30T10:38:23.331521+00:00",
     "channel": "whatsapp",
     "original_language": "zu",
     "original_text": "Izibani zomgwaqo azisebenzi ngenxa yokuphela kwamandla, izinga lokuphepha lehlile.",
     "english_translation": "Street lighting completely dark due to grid outage, severely impacting night pedestrian safety.",
     "category": "Grid & Power",
-    "latitude": -33.926153,
-    "longitude": 18.446193,
+    "latitude": -33.946162,
+    "longitude": 18.43827,
     "country": "South Africa",
     "region": "Western Cape Peninsula",
     "raw_metadata": {
@@ -833,15 +646,202 @@
     }
   },
   {
-    "id": "70889354-1f16-4f75-ae6d-0fc29b00c99c",
-    "timestamp": "2026-09-29T07:51:45.478232+00:00",
+    "id": "35dc562c-1337-471d-ba87-3b6ea9b06059",
+    "timestamp": "2026-09-30T13:55:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "zu",
+    "original_text": "Ukucinywa kukagesi (Load shedding) kudale ukuthi iziqandisi zokugcina imithi zicashe.",
+    "english_translation": "Stage 6 load shedding causing critical vaccine cold-chain refrigeration units to fail.",
+    "category": "Grid & Power",
+    "latitude": -33.911084,
+    "longitude": 18.420139,
+    "country": "South Africa",
+    "region": "Western Cape Peninsula",
+    "raw_metadata": {
+      "source_city": "Cape Town",
+      "seed_cluster": "cluster_ct_power"
+    }
+  },
+  {
+    "id": "5e466c5f-0f37-4237-88fc-099d688af27a",
+    "timestamp": "2026-09-30T13:36:23.331521+00:00",
+    "channel": "web",
+    "original_language": "zu",
+    "original_text": "Izikole zendawo azikwazi ukuqhuba amakilasi e-computer ngenxa yokucima kukagesi okungapheli.",
+    "english_translation": "Local schools unable to conduct digital classes due to unannounced rolling power blackouts.",
+    "category": "Grid & Power",
+    "latitude": -33.927087,
+    "longitude": 18.409805,
+    "country": "South Africa",
+    "region": "Western Cape Peninsula",
+    "raw_metadata": {
+      "source_city": "Cape Town",
+      "seed_cluster": "cluster_ct_power"
+    }
+  },
+  {
+    "id": "7094ae1e-d100-447c-a3e7-2dcbb81b64cb",
+    "timestamp": "2026-09-30T08:43:23.331521+00:00",
+    "channel": "web",
+    "original_language": "zu",
+    "original_text": "Izikole zendawo azikwazi ukuqhuba amakilasi e-computer ngenxa yokucima kukagesi okungapheli.",
+    "english_translation": "Local schools unable to conduct digital classes due to unannounced rolling power blackouts.",
+    "category": "Grid & Power",
+    "latitude": -33.92522,
+    "longitude": 18.447838,
+    "country": "South Africa",
+    "region": "Western Cape Peninsula",
+    "raw_metadata": {
+      "source_city": "Cape Town",
+      "seed_cluster": "cluster_ct_power"
+    }
+  },
+  {
+    "id": "b20e914e-9b9c-4343-83a1-64f0944821c7",
+    "timestamp": "2026-09-30T12:35:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "zu",
+    "original_text": "Izibani zomgwaqo azisebenzi ngenxa yokuphela kwamandla, izinga lokuphepha lehlile.",
+    "english_translation": "Street lighting completely dark due to grid outage, severely impacting night pedestrian safety.",
+    "category": "Grid & Power",
+    "latitude": -33.907632,
+    "longitude": 18.433298,
+    "country": "South Africa",
+    "region": "Western Cape Peninsula",
+    "raw_metadata": {
+      "source_city": "Cape Town",
+      "seed_cluster": "cluster_ct_power"
+    }
+  },
+  {
+    "id": "7fb65301-d673-4be1-8f01-6e30dbacae42",
+    "timestamp": "2026-09-30T14:19:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "zu",
+    "original_text": "Izibani zomgwaqo azisebenzi ngenxa yokuphela kwamandla, izinga lokuphepha lehlile.",
+    "english_translation": "Street lighting completely dark due to grid outage, severely impacting night pedestrian safety.",
+    "category": "Grid & Power",
+    "latitude": -33.936476,
+    "longitude": 18.411761,
+    "country": "South Africa",
+    "region": "Western Cape Peninsula",
+    "raw_metadata": {
+      "source_city": "Cape Town",
+      "seed_cluster": "cluster_ct_power"
+    }
+  },
+  {
+    "id": "84b84908-9fe4-4a1c-bcf0-3717af2edf8d",
+    "timestamp": "2026-09-30T12:25:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "zu",
+    "original_text": "Izibani zomgwaqo azisebenzi ngenxa yokuphela kwamandla, izinga lokuphepha lehlile.",
+    "english_translation": "Street lighting completely dark due to grid outage, severely impacting night pedestrian safety.",
+    "category": "Grid & Power",
+    "latitude": -33.945063,
+    "longitude": 18.399728,
+    "country": "South Africa",
+    "region": "Western Cape Peninsula",
+    "raw_metadata": {
+      "source_city": "Cape Town",
+      "seed_cluster": "cluster_ct_power"
+    }
+  },
+  {
+    "id": "5c67630e-3c05-4b6a-b8ba-53e502ee3e2a",
+    "timestamp": "2026-09-30T10:48:23.331521+00:00",
+    "channel": "whatsapp",
+    "original_language": "zu",
+    "original_text": "Ukucinywa kukagesi (Load shedding) kudale ukuthi iziqandisi zokugcina imithi zicashe.",
+    "english_translation": "Stage 6 load shedding causing critical vaccine cold-chain refrigeration units to fail.",
+    "category": "Grid & Power",
+    "latitude": -33.922571,
+    "longitude": 18.403737,
+    "country": "South Africa",
+    "region": "Western Cape Peninsula",
+    "raw_metadata": {
+      "source_city": "Cape Town",
+      "seed_cluster": "cluster_ct_power"
+    }
+  },
+  {
+    "id": "ae8baaf0-bff4-4134-82c2-6fd43d1494de",
+    "timestamp": "2026-09-30T11:07:23.331521+00:00",
+    "channel": "web",
+    "original_language": "zu",
+    "original_text": "Izikole zendawo azikwazi ukuqhuba amakilasi e-computer ngenxa yokucima kukagesi okungapheli.",
+    "english_translation": "Local schools unable to conduct digital classes due to unannounced rolling power blackouts.",
+    "category": "Grid & Power",
+    "latitude": -33.944344,
+    "longitude": 18.428697,
+    "country": "South Africa",
+    "region": "Western Cape Peninsula",
+    "raw_metadata": {
+      "source_city": "Cape Town",
+      "seed_cluster": "cluster_ct_power"
+    }
+  },
+  {
+    "id": "fdb98c72-3bfe-4c49-b389-dc605b967324",
+    "timestamp": "2026-09-30T11:59:23.331521+00:00",
+    "channel": "web",
+    "original_language": "zu",
+    "original_text": "Izikole zendawo azikwazi ukuqhuba amakilasi e-computer ngenxa yokucima kukagesi okungapheli.",
+    "english_translation": "Local schools unable to conduct digital classes due to unannounced rolling power blackouts.",
+    "category": "Grid & Power",
+    "latitude": -33.943022,
+    "longitude": 18.436693,
+    "country": "South Africa",
+    "region": "Western Cape Peninsula",
+    "raw_metadata": {
+      "source_city": "Cape Town",
+      "seed_cluster": "cluster_ct_power"
+    }
+  },
+  {
+    "id": "ee7f7936-8df3-414e-9995-13aec4be16a9",
+    "timestamp": "2026-09-30T10:21:23.331521+00:00",
     "channel": "twilio_voice",
     "original_language": "zu",
     "original_text": "Ugesi ucimile eKhayelitsha kusukela ekuseni, imtholampilo ayikwazi ukusebenza.",
     "english_translation": "Power outage in Khayelitsha since morning; community clinics unable to operate medical gear.",
     "category": "Grid & Power",
-    "latitude": -33.925119,
-    "longitude": 18.425479,
+    "latitude": -33.924583,
+    "longitude": 18.419225,
+    "country": "South Africa",
+    "region": "Western Cape Peninsula",
+    "raw_metadata": {
+      "source_city": "Cape Town",
+      "seed_cluster": "cluster_ct_power"
+    }
+  },
+  {
+    "id": "4a92c5d8-1f6f-45c7-ab40-f47aa264330b",
+    "timestamp": "2026-09-30T08:23:23.331521+00:00",
+    "channel": "twilio_voice",
+    "original_language": "zu",
+    "original_text": "Ugesi ucimile eKhayelitsha kusukela ekuseni, imtholampilo ayikwazi ukusebenza.",
+    "english_translation": "Power outage in Khayelitsha since morning; community clinics unable to operate medical gear.",
+    "category": "Grid & Power",
+    "latitude": -33.928754,
+    "longitude": 18.421628,
+    "country": "South Africa",
+    "region": "Western Cape Peninsula",
+    "raw_metadata": {
+      "source_city": "Cape Town",
+      "seed_cluster": "cluster_ct_power"
+    }
+  },
+  {
+    "id": "d3ff7abe-9fba-4a1c-a355-c254364450f9",
+    "timestamp": "2026-09-30T10:54:23.331521+00:00",
+    "channel": "twilio_voice",
+    "original_language": "zu",
+    "original_text": "Ugesi ucimile eKhayelitsha kusukela ekuseni, imtholampilo ayikwazi ukusebenza.",
+    "english_translation": "Power outage in Khayelitsha since morning; community clinics unable to operate medical gear.",
+    "category": "Grid & Power",
+    "latitude": -33.911082,
+    "longitude": 18.400683,
     "country": "South Africa",
     "region": "Western Cape Peninsula",
     "raw_metadata": {
